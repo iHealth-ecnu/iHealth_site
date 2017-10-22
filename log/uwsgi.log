@@ -2306,3 +2306,251 @@ Sat Oct 21 13:57:30 2017 - mem-collector thread started for worker 1
 [pid: 20888|app: 0|req: 70/74] 180.160.67.43 () {40 vars in 732 bytes} [Sat Oct 21 17:22:49 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf8 => generated 3836 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
 [pid: 20888|app: 0|req: 71/75] 106.11.242.49 () {40 vars in 660 bytes} [Sat Oct 21 20:06:02 2017] GET / => generated 2027 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
 [pid: 20888|app: 0|req: 72/76] 222.66.117.24 () {42 vars in 952 bytes} [Sun Oct 22 02:02:19 2017] GET /favicon.ico => generated 2060 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 73/77] 222.66.117.26 () {40 vars in 685 bytes} [Sun Oct 22 02:37:50 2017] GET /api/v1/articlelist => generated 3924 bytes in 671 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 74/78] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:37:57 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf8 => generated 3836 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 75/79] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:00 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf7 => generated 8438 bytes in 323 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 76/80] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:05 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf7 => generated 8438 bytes in 123 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 77/81] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:10 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf8 => generated 8438 bytes in 105 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 78/82] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:12 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf9 => generated 8438 bytes in 143 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 79/83] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:31 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf7 => generated 8438 bytes in 106 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 80/84] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:35 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bf8 => generated 8438 bytes in 121 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 81/85] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:38 2017] GET /api/v1/article?id=59eb4a34dfdeee2274700bfa => generated 8438 bytes in 125 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 82/86] 222.66.117.26 () {40 vars in 685 bytes} [Sun Oct 22 02:41:50 2017] GET /api/v1/articlelist => generated 4196 bytes in 853 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 83/87] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:53 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 84/88] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:41:57 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 85/89] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:42:02 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 104 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 86/90] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:42:20 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 87/91] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:42:24 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 105 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 88/92] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:42:50 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 105 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 89/93] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:42:53 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 90/94] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:43:18 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 91/95] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:43:58 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 93 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 92/96] 222.66.117.26 () {40 vars in 685 bytes} [Sun Oct 22 02:44:07 2017] GET /api/v1/articlelist => generated 4196 bytes in 653 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 93/97] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:44:09 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 94/98] 222.66.117.26 () {40 vars in 685 bytes} [Sun Oct 22 02:44:19 2017] GET /api/v1/articlelist => generated 4196 bytes in 113 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 95/99] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:44:25 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 96/100] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:44:35 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 97/101] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:44:42 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 304 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 98/102] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:45:12 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 6888 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 4/103] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:45:19 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 1672 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 99/104] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:45:36 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 315 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 100/105] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:45:51 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 97 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 101/106] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:46:34 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 102/107] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:09 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 103/108] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:20 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 104/109] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:24 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 104 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 105/110] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:29 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 106/111] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:43 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 342 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 107/112] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:50 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 98 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 108/113] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:48:57 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 109/114] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:49:05 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 360 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 110/115] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:49:19 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 111/116] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:49:52 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 5/117] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:49:55 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 112/118] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:50:04 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 113/119] 222.66.117.26 () {40 vars in 731 bytes} [Sun Oct 22 02:55:51 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 114/120] 222.66.117.26 () {40 vars in 731 bytes} [Sun Oct 22 02:56:05 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 115/121] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:57:05 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 116/122] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:58:10 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 105 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 117/123] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:58:14 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 118/124] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 02:59:32 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 119/125] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:00:28 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 120/126] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:00:35 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 104 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 121/127] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:00:55 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 122/128] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:01:00 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 123/129] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:01:14 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 135 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 6/130] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:01:18 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 124/131] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:01:23 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 105 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 125/132] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:01:26 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e681 => generated 4508 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 7/133] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:03:44 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e681 => generated 4508 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 126/134] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:03:38 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 6984 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 8/135] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:03:50 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 127/136] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:03:53 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 128/137] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:04:02 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 129/138] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:04:06 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 130/139] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:04:19 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 131/140] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:04:21 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 132/141] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:06:27 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 133/142] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:09:59 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 158 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 134/143] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:10:09 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 85 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 135/144] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:10:12 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 146 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 136/145] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:10:18 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 85 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 137/146] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:10:44 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 138/147] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:10:57 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 139/148] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:05 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 98 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 140/149] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:16 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 141/150] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:26 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 142/151] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:33 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 615 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 143/152] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:41 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 97 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 144/153] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:11:46 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 104 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 145/154] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:21:17 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 311 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 146/155] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:21:21 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e681 => generated 4508 bytes in 87 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 147/156] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:21:33 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 99 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 148/157] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:21:37 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 332 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 149/158] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:21:49 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 305 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 150/159] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:22:10 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 151/160] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:22:54 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 152/161] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:23:16 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 153/162] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:24:01 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 134 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 154/163] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:24:54 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 155/164] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:25:16 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 156/165] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:26:59 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 157/166] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:27:40 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 158/167] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:28:06 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 104 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 159/168] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:28:28 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 85 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 160/169] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:29:08 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 134 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 161/170] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:29:22 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 363 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 162/171] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:31:56 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 163/172] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:32:13 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 164/173] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:32:18 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 165/174] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:33:12 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 166/175] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:33:17 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 167/176] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:33:23 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 91 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 168/177] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:33:28 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 135 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 169/178] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:33:58 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 170/179] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:34:13 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e681 => generated 4508 bytes in 117 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 171/180] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:34:23 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 172/181] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:35:48 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67f => generated 2875 bytes in 127 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 173/182] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:35:51 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 174/183] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:36:18 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 86 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 175/184] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:37:13 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 176/185] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:38:54 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e680 => generated 3392 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 177/186] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:39:25 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 178/187] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:39:30 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 3888 bytes in 85 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 179/188] 222.66.117.26 () {40 vars in 732 bytes} [Sun Oct 22 03:39:56 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 17110 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 180/189] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:07:16 2017] GET /api/v1/articlelist => generated 4196 bytes in 2768 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 181/190] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:07:44 2017] GET /api/v1/articlelist => generated 4196 bytes in 455 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 182/191] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:07:56 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67d => generated 8439 bytes in 90 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 183/192] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:08:01 2017] GET /api/v1/article?id=59ec052ddfdeee223cb3e67e => generated 8439 bytes in 54 msecs (HTTP/1.1 500) 2 headers in 93 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 184/193] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:08:12 2017] GET /api/v1/articlelist => generated 4349 bytes in 259 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 185/194] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:08:39 2017] GET /api/v1/articlelist => generated 4349 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 186/195] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:08:44 2017] GET /api/v1/article?id=59ec27a7dfdeee16a8aa8d8c => generated 17110 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 187/196] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:08:48 2017] GET /api/v1/article?id=59ec27a7dfdeee16a8aa8d8d => generated 3888 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 188/197] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:08:56 2017] GET /api/v1/article?id=59ec27a7dfdeee16a8aa8d8e => generated 2875 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 189/198] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:09:26 2017] GET /api/v1/articlelist => generated 4349 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 190/199] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:09:27 2017] GET /api/v1/articlelist => generated 4349 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 191/200] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:09:37 2017] GET /api/v1/articlelist => generated 4349 bytes in 255 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 192/201] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:09:48 2017] GET /api/v1/articlelist => generated 4349 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 193/202] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:09:54 2017] GET /api/v1/articlelist => generated 4349 bytes in 466 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 194/203] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:10:00 2017] GET /api/v1/articlelist => generated 4349 bytes in 476 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 195/204] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:10:08 2017] GET /api/v1/articlelist => generated 4349 bytes in 463 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 196/205] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:10:35 2017] GET /api/v1/articlelist => generated 4349 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 197/206] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:11:06 2017] GET /api/v1/articlelist => generated 4349 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 198/207] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:11:25 2017] GET /api/v1/articlelist => generated 4349 bytes in 255 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 199/208] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:11:41 2017] GET /api/v1/articlelist => generated 4349 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 200/209] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:12:19 2017] GET /api/v1/articlelist => generated 4349 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 201/210] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:14:55 2017] GET /api/v1/articlelist => generated 4349 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 202/211] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:14:59 2017] GET /api/v1/articlelist => generated 4349 bytes in 240 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 203/212] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:15:18 2017] GET /api/v1/articlelist => generated 4349 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 204/213] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:15:19 2017] GET /api/v1/articlelist => generated 4349 bytes in 246 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 205/214] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:15:56 2017] GET /api/v1/articlelist => generated 4230 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 206/215] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:16:17 2017] GET /api/v1/articlelist => generated 4230 bytes in 266 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 207/216] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:16:24 2017] GET /api/v1/articlelist => generated 4230 bytes in 657 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 208/217] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:16:59 2017] GET /api/v1/articlelist => generated 4230 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 209/218] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:17:11 2017] GET /api/v1/articlelist => generated 4230 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 210/219] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:17:49 2017] GET /api/v1/articlelist => generated 4230 bytes in 703 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 211/220] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:11 2017] GET /api/v1/articlelist => generated 4230 bytes in 244 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 212/221] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:17 2017] GET /api/v1/articlelist => generated 4230 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 213/222] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:27 2017] GET /api/v1/articlelist => generated 4230 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 214/223] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:36 2017] GET /api/v1/articlelist => generated 4230 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 215/224] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:43 2017] GET /api/v1/articlelist => generated 4230 bytes in 238 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 216/225] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:18:48 2017] GET /api/v1/articlelist => generated 4230 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 217/226] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:19:06 2017] GET /api/v1/articlelist => generated 4230 bytes in 38 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 218/227] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:19:16 2017] GET /api/v1/articlelist => generated 4230 bytes in 654 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 219/228] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:19:26 2017] GET /api/v1/articlelist => generated 4230 bytes in 269 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 220/229] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:19:35 2017] GET /api/v1/articlelist => generated 4230 bytes in 53 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 221/230] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:19:54 2017] GET /api/v1/articlelist => generated 4230 bytes in 40 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 222/231] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:22:14 2017] GET /api/v1/articlelist => generated 4534 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 9/232] 223.104.213.62 () {40 vars in 686 bytes} [Sun Oct 22 05:22:14 2017] GET /api/v1/articlelist => generated 4534 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 223/233] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:22:45 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db05 => generated 17140 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 224/234] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:22:52 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db06 => generated 3960 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 225/235] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:22:58 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db07 => generated 2947 bytes in 41 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 226/236] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:24:34 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db05 => generated 17140 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20889|app: 0|req: 10/237] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:24:38 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db06 => generated 3960 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 227/238] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:24:41 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db07 => generated 2947 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 228/239] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:24:45 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db09 => generated 4580 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 229/240] 223.104.213.62 () {40 vars in 733 bytes} [Sun Oct 22 05:25:04 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db05 => generated 17140 bytes in 244 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 230/241] 223.104.212.152 () {40 vars in 687 bytes} [Sun Oct 22 06:55:38 2017] GET /api/v1/articlelist => generated 4534 bytes in 252 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 231/242] 223.104.212.152 () {40 vars in 734 bytes} [Sun Oct 22 06:55:43 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db06 => generated 3960 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 20888|app: 0|req: 232/243] 223.104.212.152 () {40 vars in 734 bytes} [Sun Oct 22 06:55:50 2017] GET /api/v1/article?id=59ec2af9dfdeee0a10c3db07 => generated 2947 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.15 (64bit) on [Sun Oct 22 15:09:31 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xbb0d10
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0xbb0d10 pid: 3221 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3221)
+spawned uWSGI worker 1 (pid: 3226, cores: 1)
+spawned uWSGI worker 2 (pid: 3227, cores: 1)
+spawned uWSGI worker 3 (pid: 3228, cores: 1)
+spawned uWSGI worker 4 (pid: 3229, cores: 1)
+Sun Oct 22 07:09:33 2017 - mem-collector thread started for worker 2
+Sun Oct 22 07:09:33 2017 - mem-collector thread started for worker 4
+Sun Oct 22 07:09:33 2017 - mem-collector thread started for worker 3
+Sun Oct 22 07:09:33 2017 - mem-collector thread started for worker 1
+[pid: 3226|app: 0|req: 1/1] 222.66.117.24 () {42 vars in 921 bytes} [Sun Oct 22 07:09:36 2017] GET / => generated 72264 bytes in 331 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+Sun Oct 22 07:10:34 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Oct 22 07:10:34 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Oct 22 07:10:34 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Oct 22 07:10:34 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Sun Oct 22 15:10:36 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x13abd10
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x13abd10 pid: 3285 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3285)
+spawned uWSGI worker 1 (pid: 3290, cores: 1)
+spawned uWSGI worker 2 (pid: 3291, cores: 1)
+spawned uWSGI worker 3 (pid: 3292, cores: 1)
+spawned uWSGI worker 4 (pid: 3293, cores: 1)
+Sun Oct 22 07:10:36 2017 - mem-collector thread started for worker 1
+Sun Oct 22 07:10:36 2017 - mem-collector thread started for worker 3
+Sun Oct 22 07:10:36 2017 - mem-collector thread started for worker 2
+Sun Oct 22 07:10:36 2017 - mem-collector thread started for worker 4
+[pid: 3291|app: 0|req: 1/1] 222.66.117.24 () {44 vars in 952 bytes} [Sun Oct 22 07:10:38 2017] GET / => generated 30 bytes in 100 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3291|app: 0|req: 2/2] 222.66.117.24 () {42 vars in 929 bytes} [Sun Oct 22 07:10:43 2017] GET /fdsf => generated 2141 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 3291|app: 0|req: 3/3] 222.66.117.24 () {42 vars in 933 bytes} [Sun Oct 22 07:10:51 2017] GET /api/vi => generated 2147 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 3291|app: 0|req: 4/4] 222.66.117.24 () {42 vars in 945 bytes} [Sun Oct 22 07:10:55 2017] GET /api/v1/hello => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 160 bytes (1 switches on core 0)
+[pid: 3290|app: 0|req: 1/5] 222.66.117.24 () {42 vars in 947 bytes} [Sun Oct 22 07:10:55 2017] GET /api/v1/hello/ => generated 30 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3291|app: 0|req: 5/6] 222.66.117.24 () {42 vars in 933 bytes} [Sun Oct 22 07:11:00 2017] GET /api/v1 => generated 2147 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)

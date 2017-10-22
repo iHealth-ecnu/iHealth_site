@@ -18,6 +18,7 @@ from django.contrib import admin
 from api import views
 
 urlpatterns = [
+    url(r'^$', views.hello),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/', include('api.urls')),
 ]
