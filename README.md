@@ -1,6 +1,34 @@
 ## iHealth-site
 iHealth 项目的后台程序
 
+### 接口说明
+API 接口采用 RESTful 规范设计
+
+什么是 RESTful 请看：[怎样用通俗的语言解释REST，以及RESTful？ - 知乎](https://www.zhihu.com/question/28557115)
+
+
+* 获取首页文章列表
+
+**http://ihealth.yangyingming.com/api/v1/articlelist**
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------       |
+| page     | 1        | 取第几页的数据  |
+| limit    | 10       | 一次取多少个    |
+
+示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5
+
+* 获取文章详情
+
+**http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f**
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 取指定id的文章详情 |
+
+示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+
+
 ### Django 搭建笔记
 1. 创建项目目录
 ```
