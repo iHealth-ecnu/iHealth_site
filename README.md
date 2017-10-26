@@ -1,6 +1,24 @@
 ## iHealth-site
 iHealth 项目的后台程序
 
+### 依赖
+* Django==1.8.17
+* pymongo==3.4.0
+* uWSGI==2.0.15
+
+### 启动项目
+1. 本地启动（windows）：
+```
+python manage.py runserver 0.0.0.0:8000
+```
+
+2. 打开浏览器访问 **http://127.0.0.1:8000/**  
+  出现 **Hello, I am iHealth ' backend!** 表示启动成功
+
+3. 测试其它接口  
+获取文章列表：http://127.0.0.1:8000/api/v1/articlelist  
+获取文章详情：http://127.0.0.1:8000/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+
 ### 接口说明
 API 接口采用 RESTful 规范设计
 
@@ -29,7 +47,7 @@ API 接口采用 RESTful 规范设计
 示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
 
 
-### Django 搭建笔记
+### Django 搭建笔记（笔记部分，和项目无关）
 1. 创建项目目录
 ```
 django-admin startproject iHealth_site
