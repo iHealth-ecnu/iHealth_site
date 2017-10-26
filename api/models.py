@@ -20,5 +20,15 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
 
     def find_all(self):
         '''返回全部文章'''
-        article_list = self.articles.find()
+        '''默认按照倒序排列，即取出最新插入的文章'''
+        article_list = self.articles.find().sort('_id', pymongo.DESCENDING)
         return article_list
+
+    def updateRead(self,id=None,cnt=1):
+        '''阅读量+1'''
+        if id == None:
+            raise Exception,'请提供 id 参数!'
+        self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})    
+
+
+

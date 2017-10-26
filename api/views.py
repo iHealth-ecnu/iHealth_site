@@ -33,16 +33,28 @@ def articleList(request):
 
 def articleDetail(request):
     '''文章详情接口'''
-    # 提取参数
-    id = request.GET.get('id',None)
-    if id == None:
-        return HttpResponse('请提供 id 参数!')
-    # 获取数据
-    article = Articles().find_one(id=id)
-    # 转换为 JSON
-    del article['_id']
-    del article['intro']
-    article['pubdate'] = article['pubdate'].__str__()
-    article['content'] = article['content'].strip()
-    res = json.dumps(article, indent=4)
-    return HttpResponse(res, content_type='application/json')
+    try:
+        # 提取参数
+        id = request.GET.get('id',None)
+        if id == None:
+            return HttpResponse('请提供 id 参数!')
+        # 更新文章阅读量
+        Articles().updateRead(id=id,cnt=1)
+        # 获取数据
+        article = Articles().find_one(id=id)
+        # 准备文章数据，转换为 JSON
+        del article['_id']
+        del article['intro']
+        article['pubdate'] = article['pubdate'].__str__()
+        article['content'] = article['content'].strip()
+        res = json.dumps(article, indent=4)
+        return HttpResponse(res, content_type='application/json')
+    except Exception,e:
+        res = {
+            'info' : '文章详情获取失败！\n',
+            'reason' : str(e)
+        }
+        res = json.dumps(res, indent=4)
+        return HttpResponse(res, content_type='application/json')
+
+
