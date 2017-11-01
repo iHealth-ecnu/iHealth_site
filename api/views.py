@@ -82,9 +82,12 @@ def usercheck(request):
                 'reason' : False
             }
         elif MD5(user['password']) == real_user['password']:
+            del real_user['_id']
+            del real_user['password']
             res = {
                 'info' : '用户登陆验证通过！',
-                'reason' : True
+                'reason' : True,
+                'data' : real_user
             }
         else:
             res = {
