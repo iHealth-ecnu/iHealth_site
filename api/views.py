@@ -2,7 +2,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from models import *
+import sys
 import json
+from django.views.decorators.csrf import csrf_exempt
+import hashlib
+
+
+def MD5(s):
+    '''对字符串s进行md5加密，并返回'''
+    m = hashlib.md5()
+    m.update(s)
+    return m.hexdigest()
 
 def hello(request):
     '''测试接口'''
@@ -51,10 +61,48 @@ def articleDetail(request):
         return HttpResponse(res, content_type='application/json')
     except Exception,e:
         res = {
-            'info' : '文章详情获取失败！\n',
+            'info' : '文章详情获取失败！',
             'reason' : str(e)
         }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
+
+
+# 添加该装饰器以关闭默认post提交的csrf验证
+@csrf_exempt
+def usercheck(request):
+    '''检查用户是否可以登录'''
+    try:
+        # 获取post提交的数据
+        user = request.POST
+        real_user = Users().find_one_by_email(user['email'])
+        if real_user == None:
+            res = {
+                'info' : '用户登陆验证未通过！原因：用户不存在！',
+                'reason' : False
+            }
+        elif MD5(user['password']) == real_user['password']:
+            res = {
+                'info' : '用户登陆验证通过！',
+                'reason' : True
+            }
+        else:
+            res = {
+                'info' : '用户登陆验证未通过！原因：密码错误！',
+                'reason' : False
+            }
+        res = json.dumps(res, indent=4)
+        return HttpResponse(res, content_type='application/json')
+    except Exception,e:
+        res = {
+            'info' : '用户登陆验证过程失败！',
+            'reason' : str(e)
+        }
+        res = json.dumps(res, indent=4)
+        return HttpResponse(res, content_type='application/json')
+
+
+    
+
 
 
