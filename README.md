@@ -104,3 +104,7 @@ switched to db iHealth
 [ ]
 ```
 数据库刚刚创建，所以没有数据
+
+### 参考资料
+* client 提交post 到 django出现403错误  
+  http://blog.csdn.net/watsy/article/details/9009847
