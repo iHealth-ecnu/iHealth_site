@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^hello/', views.hello),
     url(r'^articlelist', views.articleList),
     url(r'^article', views.articleDetail),
-    url(r'^usercheck', views.usercheck),
+    url(r'^usercheck', views.userCheck),
+    url(r'^userlist', views.userList),
 ]
 

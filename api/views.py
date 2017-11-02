@@ -70,7 +70,7 @@ def articleDetail(request):
 
 # 添加该装饰器以关闭默认post提交的csrf验证
 @csrf_exempt
-def usercheck(request):
+def userCheck(request):
     '''检查用户是否可以登录'''
     try:
         # 获取post提交的数据
@@ -82,7 +82,7 @@ def usercheck(request):
                 'reason' : False
             }
         elif MD5(user['password']) == real_user['password']:
-            del real_user['_id']
+            real_user['_id'] = str(real_user['_id'])
             del real_user['password']
             res = {
                 'info' : '用户登陆验证通过！',
@@ -105,7 +105,33 @@ def usercheck(request):
         return HttpResponse(res, content_type='application/json')
 
 
-    
+def userList(request):
+    '''获取用户列表'''
+    try:
+        # 提取参数
+        name = request.GET.get('name','')
+        limit = int(request.GET.get('limit',10))
+        # 获取数据
+        user_list = Users().find_many_by_name(name)
+        # 截取数据
+        user_list = user_list[:limit]
+        res_list = []
+        for user in user_list:
+            # 将对象中不是字符串的变量值转换为字符串
+            user['_id'] = user['_id'].__str__()
+            res_list.append(user)
+        # 转换为JSON
+        res = json.dumps(res_list, indent=4)
+        return HttpResponse(res, content_type='application/json')
+    except Exception,e:
+        res = {
+            'info' : '模糊匹配失败指定用户名失败！',
+            'reason' : str(e)
+        }
+        res = json.dumps(res, indent=4)
+        return HttpResponse(res, content_type='application/json')
+
+
 
 
 

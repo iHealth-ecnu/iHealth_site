@@ -27,24 +27,52 @@ API 接口采用 RESTful 规范设计
 
 * 获取首页文章列表
 
-**http://ihealth.yangyingming.com/api/v1/articlelist**
+示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5
+
+请求方式：GET
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------       |
 | page     | 1        | 取第几页的数据  |
 | limit    | 10       | 一次取多少个    |
 
-示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5
 
 * 获取文章详情
 
-**http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f**
+示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+
+请求方式：GET
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
 | id       | None     | 取指定id的文章详情 |
 
-示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+
+* 用户登陆验证
+
+示例：http://ihealth.yangyingming.com/api/v1/usercheck
+
+请求方式：POST
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| email       | None     | 待验证用户的邮箱 |
+| password       | None     | 待验证用户的密码 |
+
+示例：无
+
+* 模糊匹配指定用户名，返回符合的用户列表
+
+示例：http://ihealth.yangyingming.com/api/v1/userlist?name=小明
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| name       | ''     | 模糊匹配条件 |
+| limit       | 10     | 最多匹配多少条结果 |
+
+
 
 
 ### Django 搭建笔记（笔记部分，和项目无关）
