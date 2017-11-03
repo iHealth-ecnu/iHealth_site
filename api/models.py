@@ -57,7 +57,6 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
     def find_many_by_name(self,name):
         '''获取指定数据'''
         # 正则方式模糊查询 + 类全文索引
-        # site_list = self.sites.find({ '$or' : [{ 'title' : { '$regex' : key }  },{ 'desc' : { '$regex' : key }  }]  } )
         user_list = self.users.find({ '$or' : [{ 'name' : { '$regex' : name } }, { 'nickname' : { '$regex' : name } }] })
         return user_list
 

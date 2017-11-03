@@ -70,7 +70,19 @@ API 接口采用 RESTful 规范设计
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
 | name       | ''     | 模糊匹配条件 |
+| selfname       | ''     | 需要排除的name值 |
 | limit       | 10     | 最多匹配多少条结果 |
+
+
+* 获取用户详情
+
+示例：http://ihealth.yangyingming.com/api/v1/user?id=59fb1595dfdeee2b4c26c346
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 用户id |
 
 
 

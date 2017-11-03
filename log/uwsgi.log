@@ -6478,3 +6478,490 @@ Fri Nov  3 01:37:07 2017 - mem-collector thread started for worker 1
 [pid: 31472|app: 0|req: 225/295] 222.66.117.22 () {40 vars in 726 bytes} [Fri Nov  3 03:03:21 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
 [pid: 31472|app: 0|req: 226/296] 222.66.117.22 () {40 vars in 686 bytes} [Fri Nov  3 03:03:31 2017] GET /api/v1/user?id=null => generated 179 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
 [pid: 31474|app: 0|req: 71/297] 222.66.117.22 () {40 vars in 686 bytes} [Fri Nov  3 03:03:32 2017] GET /api/v1/user?id=null => generated 179 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 227/298] 222.66.117.22 () {40 vars in 726 bytes} [Fri Nov  3 03:20:06 2017] GET /api/v1/userlist?name=%E5%8D%8E&limit=10 => generated 453 bytes in 2170 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 228/299] 222.66.117.22 () {40 vars in 726 bytes} [Fri Nov  3 03:20:10 2017] GET /api/v1/userlist?name=%E6%9D%8E&limit=10 => generated 453 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 229/300] 222.66.117.22 () {40 vars in 726 bytes} [Fri Nov  3 03:20:13 2017] GET /api/v1/userlist?name=%E5%8D%8E&limit=10 => generated 453 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 230/301] 222.66.117.22 () {40 vars in 726 bytes} [Fri Nov  3 03:20:17 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 231/302] 222.66.117.29 () {42 vars in 921 bytes} [Fri Nov  3 04:28:21 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 72/303] 222.66.117.29 () {42 vars in 872 bytes} [Fri Nov  3 04:28:22 2017] GET /favicon.ico => generated 2162 bytes in 65 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 232/304] 222.66.117.27 () {42 vars in 939 bytes} [Fri Nov  3 06:08:15 2017] GET /favicon.ico => generated 2162 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 233/305] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 07:33:15 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 678 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 234/306] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:33:19 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 235/307] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:33:23 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 236/308] 222.66.117.27 () {42 vars in 841 bytes} [Fri Nov  3 07:45:41 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 237/309] 222.66.117.27 () {42 vars in 813 bytes} [Fri Nov  3 07:45:46 2017] GET /api/v1/user?id=null => generated 179 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 238/310] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:45:52 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 239/311] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:45:55 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 240/312] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 07:46:47 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 241/313] 222.66.117.27 () {40 vars in 743 bytes} [Fri Nov  3 07:47:02 2017] GET /api/v1/userlist?name=%E6%9D%8E%E5%8D%8E&limit=10 => generated 453 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 242/314] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 07:47:04 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 243/315] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:47:30 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 244/316] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:47:32 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 245/317] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:48:24 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 73/318] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:48:25 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 246/319] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:50:39 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 74/320] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:50:40 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 247/321] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:53:44 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 248/322] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:54:03 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 249/323] 222.66.117.27 () {48 vars in 945 bytes} [Fri Nov  3 07:54:51 2017] POST /api/v1/usercheck => generated 496 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 250/324] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 07:54:55 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 251/325] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 07:56:24 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c347 => generated 397 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 252/326] 140.205.225.201 () {38 vars in 736 bytes} [Fri Nov  3 08:03:09 2017] POST /index.php?m=member&c=index&a=register&siteid=1 => generated 2209 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 253/327] 140.205.225.201 () {34 vars in 591 bytes} [Fri Nov  3 08:03:48 2017] GET /index.php?m=wap&a=index&siteid=1 => generated 2190 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 254/328] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:14:47 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 255/329] 222.66.117.27 () {40 vars in 744 bytes} [Fri Nov  3 08:15:07 2017] GET /api/v1/userlist?name=%E6%98%8E%E6%98%8E&limit=10 => generated 2 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 256/330] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:15:09 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 257/331] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:15:53 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 258/332] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:21:49 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 259/333] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:21:50 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 44 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 260/334] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:22:01 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 38 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 261/335] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:22:47 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 262/336] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 08:23:17 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 241 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 263/337] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:23:20 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 264/338] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:23:21 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 265/339] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:23:57 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 3992 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 266/340] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:24:03 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 5848 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 75/341] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:24:06 2017] GET /api/v1/userlist?name=%E5%B0%8F&limit=10 => generated 465 bytes in 6197 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 267/342] 222.66.117.27 () {40 vars in 744 bytes} [Fri Nov  3 08:24:12 2017] GET /api/v1/userlist?name=%E5%B0%8F%E6%98%8E&limit=10 => generated 465 bytes in 5324 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 268/343] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:24:48 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 269/344] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:24:53 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 270/345] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 08:25:21 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 271/346] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:25:27 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 272/347] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:25:28 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 273/348] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 08:25:47 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 778 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 274/349] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:25:50 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 251 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 275/350] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:25:52 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 248 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 276/351] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:25:55 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 277/352] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:27:49 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 278/353] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:27:50 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 279/354] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:27:58 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 280/355] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:28:19 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 76/356] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:28:20 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 43 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 281/357] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:32:04 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 77/358] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:32:05 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 282/359] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:33:03 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 283/360] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:33:14 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 284/361] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:35:17 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 78/362] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:35:18 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 285/363] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:35:48 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 286/364] 222.66.117.27 () {40 vars in 725 bytes} [Fri Nov  3 08:35:49 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 287/365] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:37:13 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 288/366] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:37:14 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 289/367] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:37:43 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 290/368] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:37:44 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 291/369] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:38:52 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 292/370] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:38:56 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 293/371] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:42:18 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 242 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 294/372] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:42:20 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 295/373] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:42:33 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 296/374] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:42:34 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 38 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 297/375] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:43:19 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 298/376] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:43:35 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 299/377] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:44:09 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 300/378] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:44:33 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 301/379] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:45:28 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 302/380] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:45:30 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 303/381] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:45:41 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 304/382] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:45:43 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 305/383] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:45:44 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 306/384] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:46:54 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 307/385] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:47:17 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 308/386] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:48:02 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 309/387] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:48:09 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 38 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 79/388] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:48:11 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 310/389] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:48:15 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 80/390] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:48:17 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 39 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 311/391] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:49:26 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 312/392] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:49:27 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 313/393] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:49:48 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 314/394] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:50:03 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 39 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 315/395] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:50:48 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 81/396] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:50:49 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 316/397] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 08:51:07 2017] GET /api/v1/articlelist?page=2&limit=5 => generated 4973 bytes in 497 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 317/398] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:52:12 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 82/399] 222.66.117.27 () {40 vars in 726 bytes} [Fri Nov  3 08:52:13 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 36 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 318/400] 222.66.117.27 () {42 vars in 841 bytes} [Fri Nov  3 08:59:31 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 675 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 319/401] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 08:59:41 2017] GET /api/v1/userlist?name=%E6%98%8E&limit=10 => generated 923 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 83/402] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 08:59:44 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 320/403] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 08:59:47 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 321/404] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 08:59:50 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c348 => generated 403 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31474|app: 0|req: 84/405] 222.66.117.27 () {42 vars in 853 bytes} [Fri Nov  3 08:59:52 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 322/406] 222.66.117.27 () {40 vars in 714 bytes} [Fri Nov  3 09:00:01 2017] GET /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 246 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 323/407] 223.104.210.197 () {40 vars in 728 bytes} [Fri Nov  3 09:03:23 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 324/408] 180.153.228.91 () {46 vars in 899 bytes} [Fri Nov  3 09:39:27 2017] OPTIONS /api/v1/articlelist?page=1&limit=5 => generated 5139 bytes in 1279 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31472|app: 0|req: 325/409] 106.11.225.97 () {40 vars in 660 bytes} [Fri Nov  3 09:55:00 2017] GET / => generated 30 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Fri Nov  3 11:21:07 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:21:07 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:21:07 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:21:07 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:21:09 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1655d70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x1655d70 pid: 6419 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6419)
+spawned uWSGI worker 1 (pid: 6424, cores: 1)
+spawned uWSGI worker 2 (pid: 6425, cores: 1)
+spawned uWSGI worker 3 (pid: 6426, cores: 1)
+spawned uWSGI worker 4 (pid: 6427, cores: 1)
+Fri Nov  3 11:21:11 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:21:11 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:21:11 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:21:11 2017 - mem-collector thread started for worker 1
+[pid: 6427|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:21:18 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 2 bytes in 112 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6427|app: 0|req: 2/2] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:21:21 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 2 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6427|app: 0|req: 3/3] 222.66.117.27 () {42 vars in 1054 bytes} [Fri Nov  3 11:22:07 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 2 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:22:50 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:22:50 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:22:50 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:22:50 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:22:52 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1075d70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1075d70 pid: 6488 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6488)
+spawned uWSGI worker 1 (pid: 6493, cores: 1)
+spawned uWSGI worker 2 (pid: 6494, cores: 1)
+spawned uWSGI worker 3 (pid: 6495, cores: 1)
+spawned uWSGI worker 4 (pid: 6496, cores: 1)
+Fri Nov  3 11:22:52 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:22:52 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:22:52 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:22:52 2017 - mem-collector thread started for worker 1
+[pid: 6496|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1085 bytes} [Fri Nov  3 11:22:53 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 2 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:25:02 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:25:02 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:25:02 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:25:02 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:25:04 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xfedd70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xfedd70 pid: 6550 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6550)
+spawned uWSGI worker 1 (pid: 6555, cores: 1)
+spawned uWSGI worker 2 (pid: 6556, cores: 1)
+spawned uWSGI worker 3 (pid: 6557, cores: 1)
+spawned uWSGI worker 4 (pid: 6558, cores: 1)
+Fri Nov  3 11:25:05 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:25:05 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:25:05 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:25:05 2017 - mem-collector thread started for worker 1
+[pid: 6557|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1085 bytes} [Fri Nov  3 11:25:13 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 2 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6557|app: 0|req: 2/2] 222.66.117.27 () {44 vars in 1085 bytes} [Fri Nov  3 11:25:13 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 2 bytes in 34 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6558|app: 0|req: 1/3] 222.66.117.27 () {44 vars in 1085 bytes} [Fri Nov  3 11:25:14 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 2 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6557|app: 0|req: 3/4] 222.66.117.27 () {42 vars in 980 bytes} [Fri Nov  3 11:25:16 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 2 bytes in 38 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:27:50 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:27:50 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:27:50 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:27:50 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:27:52 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x172ed70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x172ed70 pid: 6614 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6614)
+spawned uWSGI worker 1 (pid: 6619, cores: 1)
+spawned uWSGI worker 2 (pid: 6620, cores: 1)
+spawned uWSGI worker 3 (pid: 6621, cores: 1)
+spawned uWSGI worker 4 (pid: 6622, cores: 1)
+Fri Nov  3 11:27:52 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:27:52 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:27:52 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:27:52 2017 - mem-collector thread started for worker 1
+[pid: 6621|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:27:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 160 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:28:32 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:28:32 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:28:32 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:28:32 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:28:34 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x24bad70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x24bad70 pid: 6672 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6672)
+spawned uWSGI worker 1 (pid: 6677, cores: 1)
+spawned uWSGI worker 2 (pid: 6678, cores: 1)
+spawned uWSGI worker 3 (pid: 6679, cores: 1)
+spawned uWSGI worker 4 (pid: 6680, cores: 1)
+Fri Nov  3 11:28:35 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:28:35 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:28:35 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:28:35 2017 - mem-collector thread started for worker 1
+[pid: 6679|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:28:35 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 160 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6677|app: 0|req: 1/2] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:28:36 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 160 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:30:48 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:30:48 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:30:48 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:30:48 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:30:50 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1af7d70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1af7d70 pid: 6785 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6785)
+spawned uWSGI worker 1 (pid: 6790, cores: 1)
+spawned uWSGI worker 2 (pid: 6791, cores: 1)
+spawned uWSGI worker 3 (pid: 6792, cores: 1)
+spawned uWSGI worker 4 (pid: 6793, cores: 1)
+Fri Nov  3 11:30:50 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:30:50 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:30:50 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:30:50 2017 - mem-collector thread started for worker 1
+[pid: 6791|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:51 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 22 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 2/2] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:53 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 3/3] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:54 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 4/4] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 5/5] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 6/6] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6791|app: 0|req: 7/7] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6790|app: 0|req: 1/8] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:30:55 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 176 bytes in 22 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:31:15 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:15 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:15 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:15 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:31:17 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xe91d70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xe91d70 pid: 6873 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6873)
+spawned uWSGI worker 1 (pid: 6880, cores: 1)
+spawned uWSGI worker 2 (pid: 6881, cores: 1)
+spawned uWSGI worker 3 (pid: 6882, cores: 1)
+spawned uWSGI worker 4 (pid: 6883, cores: 1)
+Fri Nov  3 11:31:18 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:31:18 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:31:18 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:31:18 2017 - mem-collector thread started for worker 1
+[pid: 6883|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1011 bytes} [Fri Nov  3 11:31:18 2017] GET /api/v1/userlist?name=%E6%98%8E => generated 923 bytes in 69 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6883|app: 0|req: 2/2] 222.66.117.27 () {42 vars in 1054 bytes} [Fri Nov  3 11:31:22 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 459 bytes in 239 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+Fri Nov  3 11:31:57 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:57 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:57 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:31:57 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:32:00 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2135d70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2135d70 pid: 6947 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6947)
+spawned uWSGI worker 1 (pid: 6952, cores: 1)
+spawned uWSGI worker 2 (pid: 6953, cores: 1)
+spawned uWSGI worker 3 (pid: 6954, cores: 1)
+spawned uWSGI worker 4 (pid: 6955, cores: 1)
+Fri Nov  3 11:32:00 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:32:00 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:32:00 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:32:00 2017 - mem-collector thread started for worker 1
+[pid: 6954|app: 0|req: 1/1] 222.66.117.27 () {44 vars in 1085 bytes} [Fri Nov  3 11:32:01 2017] GET /api/v1/userlist?name=%E6%98%8E&selfname=%E6%9D%A8%E8%8B%B1%E6%98%8E => generated 459 bytes in 55 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6954|app: 0|req: 2/2] 222.66.117.27 () {42 vars in 998 bytes} [Fri Nov  3 11:33:27 2017] GET /api/v1/user?id=59fb1595dfdeee2b4c26c346 => generated 409 bytes in 40 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 6954|app: 0|req: 3/3] 222.66.117.27 () {42 vars in 943 bytes} [Fri Nov  3 11:34:21 2017] GET /api/v1/user => generated 20 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Fri Nov  3 11:34:25 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:34:25 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:34:25 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Nov  3 11:34:25 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 19:34:27 2017] ***
+compiled with version: 5.4.0 20160609 on 19 July 2017 21:31:50
+os: Linux-4.4.0-82-generic #105-Ubuntu SMP Tue Jun 20 15:23:02 UTC 2017
+nodename: iZ2zegis1iqwk7ddw7voqtZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yym/workspace/iHealth_site
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yym/workspace/iHealth_site
+your processes number limit is 7857
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8002 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x228ad70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507160 bytes (495 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x228ad70 pid: 7091 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7091)
+spawned uWSGI worker 1 (pid: 7096, cores: 1)
+spawned uWSGI worker 2 (pid: 7097, cores: 1)
+spawned uWSGI worker 3 (pid: 7098, cores: 1)
+spawned uWSGI worker 4 (pid: 7099, cores: 1)
+Fri Nov  3 11:34:27 2017 - mem-collector thread started for worker 2
+Fri Nov  3 11:34:27 2017 - mem-collector thread started for worker 4
+Fri Nov  3 11:34:27 2017 - mem-collector thread started for worker 3
+Fri Nov  3 11:34:27 2017 - mem-collector thread started for worker 1

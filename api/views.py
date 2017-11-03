@@ -110,6 +110,7 @@ def userList(request):
     try:
         # 提取参数
         name = request.GET.get('name','')
+        selfname = request.GET.get('selfname','')
         limit = int(request.GET.get('limit',10))
         # 获取数据
         user_list = Users().find_many_by_name(name)
@@ -119,6 +120,9 @@ def userList(request):
         for user in user_list:
             # 将对象中不是字符串的变量值转换为字符串
             user['_id'] = user['_id'].__str__()
+            # 排除掉自身
+            if user['name']==selfname:
+                continue
             res_list.append(user)
         # 转换为JSON
         res = json.dumps(res_list, indent=4)
