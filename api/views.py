@@ -132,6 +132,26 @@ def userList(request):
         return HttpResponse(res, content_type='application/json')
 
 
+def userDetail(request):
+    '''用户详情接口'''
+    try:
+        # 提取参数
+        id = request.GET.get('id',None)
+        if id == None:
+            return HttpResponse('请提供 id 参数!')
+        # 获取数据
+        user = Users().find_one(id=id)
+        # 准备文章数据，转换为 JSON
+        user['_id'] = str(user['_id'])
+        res = json.dumps(user, indent=4)
+        return HttpResponse(res, content_type='application/json')
+    except Exception,e:
+        res = {
+            'info' : '用户详情获取失败！',
+            'reason' : str(e)
+        }
+        res = json.dumps(res, indent=4)
+        return HttpResponse(res, content_type='application/json')
 
 
 

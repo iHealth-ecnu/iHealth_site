@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^article', views.articleDetail),
     url(r'^usercheck', views.userCheck),
     url(r'^userlist', views.userList),
+    url(r'^user', views.userDetail),
 ]
 
