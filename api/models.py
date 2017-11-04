@@ -60,3 +60,6 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         user_list = self.users.find({ '$or' : [{ 'name' : { '$regex' : name } }, { 'nickname' : { '$regex' : name } }] })
         return user_list
 
+    def insert_one(self,data):
+        '''插入数据'''
+        self.users.insert_one(data)

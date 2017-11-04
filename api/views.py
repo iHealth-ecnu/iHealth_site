@@ -61,8 +61,8 @@ def articleDetail(request):
         return HttpResponse(res, content_type='application/json')
     except Exception,e:
         res = {
-            'info' : '文章详情获取失败！',
-            'reason' : str(e)
+            'msg' : '文章详情获取失败！',
+            'reason' : str(e),
         }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
@@ -75,31 +75,32 @@ def userCheck(request):
     try:
         # 获取post提交的数据
         user = request.POST
+        print user
         real_user = Users().find_one_by_email(user['email'])
         if real_user == None:
             res = {
-                'info' : '用户登陆验证未通过！原因：用户不存在！',
-                'reason' : False
+                'msg' : '用户登陆验证未通过！原因：用户不存在！',
+                'result' : False,
             }
         elif MD5(user['password']) == real_user['password']:
             real_user['_id'] = str(real_user['_id'])
             del real_user['password']
             res = {
-                'info' : '用户登陆验证通过！',
-                'reason' : True,
-                'data' : real_user
+                'msg' : '用户登陆验证通过！',
+                'data' : real_user,
+                'result' : True,
             }
         else:
             res = {
-                'info' : '用户登陆验证未通过！原因：密码错误！',
-                'reason' : False
+                'msg' : '用户登陆验证未通过！原因：密码错误！',
+                'result' : False,
             }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
     except Exception,e:
         res = {
-            'info' : '用户登陆验证过程失败！',
-            'reason' : str(e)
+            'msg' : '用户登陆验证过程失败！',
+            'reason' : str(e),
         }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
@@ -129,8 +130,8 @@ def userList(request):
         return HttpResponse(res, content_type='application/json')
     except Exception,e:
         res = {
-            'info' : '模糊匹配失败指定用户名失败！',
-            'reason' : str(e)
+            'msg' : '模糊匹配失败指定用户名失败！',
+            'reason' : str(e),
         }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
@@ -151,11 +152,37 @@ def userDetail(request):
         return HttpResponse(res, content_type='application/json')
     except Exception,e:
         res = {
-            'info' : '用户详情获取失败！',
-            'reason' : str(e)
+            'msg' : '用户详情获取失败！',
+            'reason' : str(e),
         }
-        res = json.dumps(res, indent=4)
-        return HttpResponse(res, content_type='application/json')
+    res = json.dumps(res, indent=4)
+    return HttpResponse(res, content_type='application/json')
 
+@csrf_exempt
+def regUser(request):
+    '''注册用户'''
+    try:
+        data = request.POST.copy()
+        print data
+        # 判断是否已存在该邮箱注册的账号
+        if not (data.has_key('email') and data.has_key('password') and data.has_key('nickname') and data.has_key('sex') and data.has_key('type') and data.has_key('birthday')):
+            raise Exception,'注册信息参数不完整'
+        if Users().find_one_by_email(data['email']) != None:
+            raise Exception,'邮箱已被注册过'
+        # 插入数据
+        data['password'] = MD5(data['password'])
+        Users().insert_one(data)
+        res = {
+            'msg' : '用户注册成功！',
+            'result' : True,
+        }
+    except Exception,e:
+        res = {
+            'msg' : '用户注册失败！',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res, indent=4)
+    return HttpResponse(res, content_type='application/json')
 
 
