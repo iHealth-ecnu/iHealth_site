@@ -165,7 +165,7 @@ def regUser(request):
         data = request.POST.copy()
         print data
         # 判断是否已存在该邮箱注册的账号
-        if not (data.has_key('email') and data.has_key('password') and data.has_key('nickname') and data.has_key('sex') and data.has_key('type') and data.has_key('birthday')):
+        if not (data.has_key('email') and data.has_key('password') and data.has_key('nickname') and data.has_key('sex') and data.has_key('usertype') and data.has_key('birthday')):
             raise Exception,'注册信息参数不完整'
         if Users().find_one_by_email(data['email']) != None:
             raise Exception,'邮箱已被注册过'

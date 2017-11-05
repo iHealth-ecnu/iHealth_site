@@ -85,6 +85,26 @@ API 接口采用 RESTful 规范设计
 | id       | None     | 用户id |
 
 
+* 用户注册
+
+示例：http://ihealth.yangyingming.com/api/v1/reguser
+
+请求方式：POST
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| email       | None     | 注册邮箱 |
+| password       | None     | 密码 |
+| nickname       | None     | 用户昵称 |
+| name       | None     |用户真实姓名 |
+| sex       | None     | 性别 0:女 1:男|
+| usertype       | None     | 用户类别 0:游客 1:患者 2:医生 3:管理员 |
+| birthday       | None     | 用户出生日期 |
+| introduction       | None     | 个人介绍 |
+| age       | None     | 用户年龄 |
+| phone       | None     | 注册手机号 |
+
+
 
 
 ### Django 搭建笔记（笔记部分，和项目无关）
