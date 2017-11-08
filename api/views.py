@@ -79,7 +79,8 @@ def userCheck(request):
         real_user = Users().find_one_by_email(user['email'])
         if real_user == None:
             res = {
-                'msg' : '用户登陆验证未通过！原因：用户不存在！',
+                'msg' : '用户登陆验证未通过！',
+                'reason' : 'User is not found.',
                 'result' : False,
             }
         elif MD5(user['password']) == real_user['password']:
@@ -92,7 +93,8 @@ def userCheck(request):
             }
         else:
             res = {
-                'msg' : '用户登陆验证未通过！原因：密码错误！',
+                'msg' : '用户登陆验证未通过！',
+                'reason' : 'Password error.',
                 'result' : False,
             }
         res = json.dumps(res, indent=4)
@@ -101,6 +103,7 @@ def userCheck(request):
         res = {
             'msg' : '用户登陆验证过程失败！',
             'reason' : str(e),
+            'result' : False,
         }
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
