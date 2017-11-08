@@ -25,6 +25,7 @@ API 接口采用 RESTful 规范设计
 什么是 RESTful 请看：[怎样用通俗的语言解释REST，以及RESTful？ - 知乎](https://www.zhihu.com/question/28557115)
 
 
+----
 * 获取首页文章列表
 
 示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5
@@ -35,7 +36,7 @@ API 接口采用 RESTful 规范设计
 | -------- | -------- | --------       |
 | page     | 1        | 取第几页的数据  |
 | limit    | 10       | 一次取多少个    |
-
+----
 
 * 获取文章详情
 
@@ -47,6 +48,7 @@ API 接口采用 RESTful 规范设计
 | -------- | -------- | --------          |
 | id       | None     | 取指定id的文章详情 |
 
+----
 
 * 用户登陆验证
 
@@ -59,8 +61,7 @@ API 接口采用 RESTful 规范设计
 | email       | None     | 待验证用户的邮箱 |
 | password       | None     | 待验证用户的密码 |
 
-示例：无
-
+----
 * 模糊匹配指定用户名，返回符合的用户列表
 
 示例：http://ihealth.yangyingming.com/api/v1/userlist?name=小明
@@ -73,6 +74,7 @@ API 接口采用 RESTful 规范设计
 | selfname       | ''     | 需要排除的name值 |
 | limit       | 10     | 最多匹配多少条结果 |
 
+----
 
 * 获取用户详情
 
@@ -84,6 +86,7 @@ API 接口采用 RESTful 规范设计
 | -------- | -------- | --------          |
 | id       | None     | 用户id |
 
+----
 
 * 用户注册
 
@@ -104,8 +107,7 @@ API 接口采用 RESTful 规范设计
 | age       | None     | 用户年龄 |
 | phone       | None     | 注册手机号 |
 
-
-
+----
 
 ### Django 搭建笔记（笔记部分，和项目无关）
 1. 创建项目目录
