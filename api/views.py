@@ -14,18 +14,14 @@ def userListByID(request):
     if usersId == None:
            return HttpResponse('请提供 id 参数!!!!!!')
 
-    usersI=usersId.split(',')
+    usersID=usersId.split(',')
 
     users=[]
-    for ID in usersI:
+    for ID in usersID:
         temp=Users().find_one(id=ID)
         temp['_id']=temp['_id'].__str__()
         users.append(temp)
 
-   # res={
-   #     'list':usersId,
-   # }
-   # return HttpResponse(users[0])
     res = json.dumps(users,indent=4)
     return HttpResponse(res, content_type='application/json')
 
