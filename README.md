@@ -121,6 +121,18 @@ API 接口采用 RESTful 规范设计
 
 ----
 
+* 根据ID批量获取用户信息
+
+示例：http://ihealth.yangyingming.com/api/v1/userlistbyid?id=59fb1595dfdeee2b4c26c347,59fb1595dfdeee2b4c26c348
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要获取的用户id，可以是多个 |
+
+----
+
 ### Django 搭建笔记（笔记部分，和项目无关）
 1. 创建项目目录
 ```
