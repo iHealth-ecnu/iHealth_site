@@ -12,7 +12,7 @@ import hashlib
 def userListByID(request):
     usersId=request.GET.get('id',None)
     if usersId == None:
-           return HttpResponse('请提供 id 参数!!!!!!')
+        return HttpResponse('请提供 id 参数!!!!!!')
 
     usersID=usersId.split(',')
 
