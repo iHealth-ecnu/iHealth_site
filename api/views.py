@@ -24,8 +24,23 @@ def articleList(request):
     # 提取参数
     page = int(request.GET.get('page',1))
     limit = int(request.GET.get('limit',10))
-    # 获取数据
-    article_list = Articles().find_all()
+    userID = request.GET.get('userID', None)
+
+
+    #未登录用户
+    if userID == None:
+        # 获取数据
+        article_list = Articles().find_all()
+    else:
+        #获取用户对应的labels
+        labels = Users().find_label(userID)
+        if labels == []:
+            #用户没有labels
+            article_list = Articles().find_all()
+        else:
+            # 获取对应label的数据
+            article_list = Articles().find_labelArticle(labels)
+
     # 截取数据
     article_list = article_list[(page-1)*limit:(page-1)*limit+limit]
     res_list = []
