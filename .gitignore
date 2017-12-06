@@ -1,2 +1,4 @@
 *.pyc
 *.log
+.idea
+db.sqlite3

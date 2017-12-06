@@ -28,7 +28,13 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         '''阅读量+1'''
         if id == None:
             raise Exception,'请提供 id 参数!'
-        self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})    
+        self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})
+
+    def find_labelArticle(self, labels):
+        category = [{'category':stri} for stri in labels]
+        article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
+        return article_list
+
 
 class Users():
     def __init__(self):
@@ -43,6 +49,12 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         '''获取指定数据'''
         user = self.users.find_one({"_id": ObjectId(id)})
         return user
+
+    def find_label(self, id):
+        '''获取用户对应的label'''
+        user = self.users.find_one({"_id": ObjectId(id)})
+        label = user['labels']
+        return label
 
     def find_all(self):
         '''返回全部用户数据'''
