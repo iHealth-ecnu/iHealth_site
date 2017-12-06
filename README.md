@@ -40,7 +40,7 @@ API 接口采用 RESTful 规范设计
 ----
 * 获取首页文章列表
 
-示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5&userID=5a02e30be6c80c1c9ecdaea7
+示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=10&userID=5a02e30be6c80c1c9ecdaea7
 
 请求方式：GET
 
