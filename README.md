@@ -1,4 +1,4 @@
-## iHealth-site
+﻿## iHealth-site
 iHealth 项目的后台程序
 
 ### 依赖
@@ -40,7 +40,7 @@ API 接口采用 RESTful 规范设计
 ----
 * 获取首页文章列表
 
-示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5
+示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=5&userID=5a02e30be6c80c1c9ecdaea7
 
 请求方式：GET
 
@@ -48,6 +48,8 @@ API 接口采用 RESTful 规范设计
 | -------- | -------- | --------       |
 | page     | 1        | 取第几页的数据  |
 | limit    | 10       | 一次取多少个    |
+| userID   | None     | 用户ID,个性化推荐用 |
+
 ----
 
 * 获取文章详情
