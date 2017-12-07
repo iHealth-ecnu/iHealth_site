@@ -35,6 +35,11 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
         return article_list
 
+    def updateUpvote(self,id=None):
+        if id == None:
+            raise Exception,'请提供 id 参数!'
+        self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'upvote':1}})
+
 
 class Users():
     def __init__(self):
