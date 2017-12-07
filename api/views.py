@@ -83,6 +83,12 @@ def articleDetail(request):
         res = json.dumps(res, indent=4)
         return HttpResponse(res, content_type='application/json')
 
+def doUpvote(request):
+    id=request.GET.get('id',None)
+    if id == None:
+        return HttpResponse('请提供 id 参数!')
+    Articles().updateUpvote(id=id)
+    #return HttpResponse("YES")
 
 # 添加该装饰器以关闭默认post提交的csrf验证
 @csrf_exempt

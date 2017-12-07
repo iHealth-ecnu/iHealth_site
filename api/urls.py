@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^user$', views.userDetail),
     url(r'^reguser', views.regUser),
     url(r'^userlistbyid$',views.userListByID),
-
+    url(r'^updateUpvote$',views.doUpvote),
 ]
 
