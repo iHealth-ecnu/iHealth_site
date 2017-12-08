@@ -84,11 +84,24 @@ def articleDetail(request):
         return HttpResponse(res, content_type='application/json')
 
 def doUpvote(request):
-    id=request.GET.get('id',None)
-    if id == None:
-        return HttpResponse('请提供 id 参数!')
-    Articles().updateUpvote(id=id)
-    #return HttpResponse("YES")
+    try:
+        id=request.GET.get('id',None)
+        if id == None:
+            return HttpResponse('请提供 id 参数!')
+
+        Articles().updateUpvote(id=id)
+        res = {
+            'msg' : '点赞成功！',
+            'result' : True,
+        }
+    except Exception,e:
+        res = {
+            'msg' : '点赞失败！',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res, indent=4)
+    return HttpResponse(res, content_type='application/json')
 
 # 添加该装饰器以关闭默认post提交的csrf验证
 @csrf_exempt
@@ -213,18 +226,48 @@ def regUser(request):
 
 #根据id列表取出users用于群聊
 def userListByID(request):
-    usersId=request.GET.get('id',None)
-    if usersId == None:
-        return HttpResponse('请提供 id 参数')
+    try:
+        usersId=request.GET.get('id',None)
+        if usersId == None:
+            raise Exception,'请提供 id 参数'
 
-    usersID=usersId.split(',')
+        usersID=usersId.split(',')
 
-    users=[]
-    for ID in usersID:
-        temp=Users().find_one(id=ID)
-        temp['_id']=temp['_id'].__str__()
-        users.append(temp)
-
-    res = json.dumps(users,indent=4)
+        users=[]
+        for ID in usersID:
+            temp=Users().find_one(id=ID)
+            temp['_id']=temp['_id'].__str__()
+            users.append(temp)
+        res = {
+            'msg' : '获取成功！',
+            'result' : True,
+        }
+    except Exception,e:
+        res = {
+            'msg' : '获取失败！',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res, indent=4)
     return HttpResponse(res, content_type='application/json')
 
+def changeNickname(request):
+    try:
+        userID = request.GET.get('id',None)
+        name = request.GET.get('newName',None)
+        if userID==None or name==None:
+            raise Exception,'注册信息参数不完整'
+
+        Users().changeNickname(userID,name)
+        res = {
+            'msg' : '修改成功',
+            'result' : True,
+        }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')

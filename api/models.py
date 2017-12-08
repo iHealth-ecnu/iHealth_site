@@ -80,3 +80,8 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
     def insert_one(self,data):
         '''插入数据'''
         self.users.insert_one(data)
+
+    def changeNickname(self,id=None,newName=None):
+        if id == None or newName == None:
+            raise Exception,'请提供 id 和昵称完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'nickname':newName}})
