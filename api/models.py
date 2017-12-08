@@ -85,3 +85,8 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         if id == None or newName == None:
             raise Exception,'请提供 id 和昵称完整参数!'
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'nickname':newName}})
+
+    def changePhone(self,id=None,newPhone=None):
+        if id == None or newPhone == None:
+            raise Exception,'请提供 id 和昵称完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'phone':newPhone}})

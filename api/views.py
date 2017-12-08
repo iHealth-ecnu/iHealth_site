@@ -271,3 +271,24 @@ def changeNickname(request):
         }
     res = json.dumps(res,indent=4)
     return HttpResponse(res, content_type='application/json')
+
+def changePhone(request):
+    try:
+        userID = request.GET.get('id',None)
+        Phone = request.GET.get('newPhone',None)
+        if userID==None or Phone==None:
+            raise Exception,'注册信息参数不完整'
+
+        Users().changePhone(userID,Phone)
+        res = {
+            'msg' : '修改成功',
+            'result' : True,
+        }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
