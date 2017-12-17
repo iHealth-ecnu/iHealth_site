@@ -31,7 +31,7 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})
 
     def find_labelArticle(self, labels):
-        category = [{'category':stri} for stri in labels]
+        category = [{'category':stri} for stri in labels.keys()]
         article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
         return article_list
 

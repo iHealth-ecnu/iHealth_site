@@ -34,7 +34,7 @@ def articleList(request):
     else:
         #获取用户对应的labels
         labels = Users().find_label(userID)
-        if labels == []:
+        if labels == {}:
             #用户没有labels
             article_list = Articles().find_all()
         else:
@@ -209,6 +209,8 @@ def regUser(request):
             raise Exception,'邮箱已被注册过'
         # 插入数据
         data['password'] = MD5(data['password'])
+        #设初始labels为空，个性化推荐用
+        data['labels'] = {}
         Users().insert_one(data)
         res = {
             'msg' : '用户注册成功！',
