@@ -88,6 +88,19 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         if self.find_label(id) == None:
             self.users.update_one({"_id": ObjectId(id)},{'$set':{'labels':{}}})
 
+    def update_label(self, id, label, value):
+        '''更新labels中label的值'''
+        #没有labels的用户首先设置label
+        self.insert_label(id)
+        #首先找到对应用户的labels
+        user = self.users.find_one({"_id": ObjectId(id)})
+        cur_labels = user['labels']
+        if cur_labels.has_key(label):
+            cur_labels[label] = cur_labels[label] + value
+        else: #新增对应label
+            cur_labels[label] = value
+        self.users.update_one({"_id": ObjectId(id)}, {'$set': {'labels':cur_labels}})
+
     def changeNickname(self,id=None,newName=None):
         if id == None or newName == None:
             raise Exception,'请提供 id 和昵称完整参数!'

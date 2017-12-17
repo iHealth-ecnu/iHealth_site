@@ -17,7 +17,7 @@ python manage.py runserver 0.0.0.0:8000
 
 3. 测试其它接口  
 获取文章列表：http://127.0.0.1:8000/api/v1/articlelist  
-获取文章详情：http://127.0.0.1:8000/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+获取文章详情：http://127.0.0.1:8000/api/v1/articledetail?id=59eefad4e6c80c707840adc2
 
 ### TODO
 * [x] 【接口】获取文章首页列表
@@ -54,13 +54,27 @@ API 接口采用 RESTful 规范设计
 
 * 获取文章详情
 
-示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59ec737bdfdeee3708bc5d0f
+示例：http://ihealth.yangyingming.com/api/v1/articledetail?id=59eefad4e6c80c707840adc2&userID=5a02e30be6c80c1c9ecdaea7
 
 请求方式：GET
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
 | id       | None     | 取指定id的文章详情 |
+| userID   | None     | 用户ID,个性化推荐用 |
+
+----
+
+* 点赞接口
+
+示例：http://ihealth.yangyingming.com/api/v1/updateUpvote?id=59eefad4e6c80c707840adc2&userID=5a02e30be6c80c1c9ecdaea7
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 取指定id的文章详情 |
+| userID   | None     | 用户ID,个性化推荐用 |
 
 ----
 

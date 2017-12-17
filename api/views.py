@@ -64,12 +64,17 @@ def articleDetail(request):
     try:
         # 提取参数
         id = request.GET.get('id',None)
+        userID = request.GET.get('userID', None)
+
         if id == None:
             return HttpResponse('请提供 id 参数!')
         # 更新文章阅读量
         Articles().updateRead(id=id,cnt=1)
         # 获取数据
         article = Articles().find_one(id=id)
+        # 更新用户label，个性化推荐用 阅读暂定+1
+        if userID != None:
+            Users().update_label(userID, article['category'], 1)
         # 准备文章数据，转换为 JSON
         del article['_id']
         del article['intro']
@@ -86,8 +91,10 @@ def articleDetail(request):
         return HttpResponse(res, content_type='application/json')
 
 def doUpvote(request):
+    '''点赞接口'''
     try:
         id=request.GET.get('id',None)
+        userID = request.GET.get('userID', None)
         if id == None:
             return HttpResponse('请提供 id 参数!')
 
@@ -96,6 +103,10 @@ def doUpvote(request):
             'msg' : '点赞成功！',
             'result' : True,
         }
+        article = Articles().find_one(id=id)
+        # 更新用户label，个性化推荐用 点赞暂定+10
+        if userID != None:
+            Users().update_label(userID, article['category'], 10)
     except Exception,e:
         res = {
             'msg' : '点赞失败！',
