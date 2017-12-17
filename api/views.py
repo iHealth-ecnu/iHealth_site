@@ -34,9 +34,11 @@ def articleList(request):
     else:
         #获取用户对应的labels
         labels = Users().find_label(userID)
-        if labels == {}:
+        if labels == {} or labels == None:
             #用户没有labels
             article_list = Articles().find_all()
+            if labels == None: #对没有labels的用户设置labels
+                Users().insert_label(userID)
         else:
             # 获取对应label的数据
             article_list = Articles().find_labelArticle(labels)

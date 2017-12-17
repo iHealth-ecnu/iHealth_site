@@ -56,10 +56,12 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         return user
 
     def find_label(self, id):
-        '''获取用户对应的label'''
+        '''获取用户对应的labels'''
         user = self.users.find_one({"_id": ObjectId(id)})
-        label = user['labels']
-        return label
+        if user.has_key('labels'):
+            return user['labels']
+        else: #用户没有label
+            return None
 
     def find_all(self):
         '''返回全部用户数据'''
@@ -80,6 +82,11 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
     def insert_one(self,data):
         '''插入数据'''
         self.users.insert_one(data)
+
+    def insert_label(self, id):
+        '''给没有labels的用户设置空labels'''
+        if self.find_label(id) == None:
+            self.users.update_one({"_id": ObjectId(id)},{'$set':{'labels':{}}})
 
     def changeNickname(self,id=None,newName=None):
         if id == None or newName == None:
