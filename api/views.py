@@ -25,21 +25,33 @@ def articleList(request):
     page = int(request.GET.get('page',1))
     limit = int(request.GET.get('limit',10))
     userID = request.GET.get('userID', None)
+    #cate为首页显示的的文章分类，None时返回所有文章
+    cate = request.GET.get('cate', None)
 
-
-    #未登录用户
-    if userID == None:
+    #文章分类为空时：
+    if cate == None:
         # 获取数据
         article_list = Articles().find_all()
     else:
-        #获取用户对应的labels
-        labels = Users().find_label(userID)
-        if labels == []:
-            #用户没有labels
-            article_list = Articles().find_all()
+        #文章分类为 推荐
+        if cate == 'recommend':
+            #游客，返回所有文章
+            if userID == None:
+                article_list = Articles().find_all()
+            else:
+                #返回用户label
+                labels = Users().find_label(userID)
+                if labels == {} or labels == None:
+                    #用户没有labels
+                    article_list = Articles().find_all()
+                    if labels == None:
+                        #对没有labels的用户设置labels
+                        Users().insert_label(userID)
+                else:
+                    # 获取对应label的数据
+                    article_list = Articles().find_recommendArticle(labels)
         else:
-            # 获取对应label的数据
-            article_list = Articles().find_labelArticle(labels)
+            article_list = Articles().find_labelArticle(cate)
 
     # 截取数据
     article_list = article_list[(page-1)*limit:(page-1)*limit+limit]
@@ -62,12 +74,17 @@ def articleDetail(request):
     try:
         # 提取参数
         id = request.GET.get('id',None)
+        userID = request.GET.get('userID', None)
+
         if id == None:
             return HttpResponse('请提供 id 参数!')
         # 更新文章阅读量
         Articles().updateRead(id=id,cnt=1)
         # 获取数据
         article = Articles().find_one(id=id)
+        # 更新用户label，个性化推荐用 阅读暂定+1
+        if userID != None:
+            Users().update_label(userID, article['category'], 1)
         # 准备文章数据，转换为 JSON
         del article['_id']
         del article['intro']
@@ -84,8 +101,10 @@ def articleDetail(request):
         return HttpResponse(res, content_type='application/json')
 
 def doUpvote(request):
+    '''点赞接口'''
     try:
         id=request.GET.get('id',None)
+        userID = request.GET.get('userID', None)
         if id == None:
             return HttpResponse('请提供 id 参数!')
 
@@ -94,6 +113,10 @@ def doUpvote(request):
             'msg' : '点赞成功！',
             'result' : True,
         }
+        article = Articles().find_one(id=id)
+        # 更新用户label，个性化推荐用 点赞暂定+10
+        if userID != None:
+            Users().update_label(userID, article['category'], 10)
     except Exception,e:
         res = {
             'msg' : '点赞失败！',
@@ -209,6 +232,8 @@ def regUser(request):
             raise Exception,'邮箱已被注册过'
         # 插入数据
         data['password'] = MD5(data['password'])
+        #设初始labels为空，个性化推荐用
+        data['labels'] = {}
         Users().insert_one(data)
         res = {
             'msg' : '用户注册成功！',

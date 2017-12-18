@@ -30,12 +30,25 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
             raise Exception,'请提供 id 参数!'
         self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})
 
-    def find_labelArticle(self, labels):
-        category = [{'category':stri} for stri in labels]
+    def find_recommendArticle(self, labels):
+        '''根据用户的兴趣label选择文章序列并返回'''
+        #labels按照值降序排列，放在label_list中
+        label_list = sorted(labels.items(), key=lambda e:e[1], reverse=True)
+        #只取前5个兴趣label
+        if len(label_list) > 5:
+            label_list = label_list[0:5]
+        #返回用户感兴趣的所有文章
+        category = [{'category':stri[0]} for stri in label_list]
         article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
         return article_list
 
+    def find_labelArticle(self, label):
+        '''返回单个label的文章列表'''
+        article_list = self.articles.find({'category': label}).sort('_id', pymongo.DESCENDING)
+        return article_list
+
     def updateUpvote(self,id=None):
+        '''点赞接口'''
         if id == None:
             raise Exception,'请提供 id 参数!'
         self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'upvote':1}})
@@ -56,10 +69,12 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         return user
 
     def find_label(self, id):
-        '''获取用户对应的label'''
+        '''获取用户对应的labels'''
         user = self.users.find_one({"_id": ObjectId(id)})
-        label = user['labels']
-        return label
+        if user.has_key('labels'):
+            return user['labels']
+        else: #用户没有label
+            return None
 
     def find_all(self):
         '''返回全部用户数据'''
@@ -80,6 +95,24 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
     def insert_one(self,data):
         '''插入数据'''
         self.users.insert_one(data)
+
+    def insert_label(self, id):
+        '''给没有labels的用户设置空labels'''
+        if self.find_label(id) == None:
+            self.users.update_one({"_id": ObjectId(id)},{'$set':{'labels':{}}})
+
+    def update_label(self, id, label, value):
+        '''更新labels中label的值'''
+        #没有labels的用户首先设置label
+        self.insert_label(id)
+        #首先找到对应用户的labels
+        user = self.users.find_one({"_id": ObjectId(id)})
+        cur_labels = user['labels']
+        if cur_labels.has_key(label):
+            cur_labels[label] = cur_labels[label] + value
+        else: #新增对应label
+            cur_labels[label] = value
+        self.users.update_one({"_id": ObjectId(id)}, {'$set': {'labels':cur_labels}})
 
     def changeNickname(self,id=None,newName=None):
         if id == None or newName == None:
