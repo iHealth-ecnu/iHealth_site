@@ -277,6 +277,7 @@ def userListByID(request):
     res = json.dumps(res, indent=4)
     return HttpResponse(res, content_type='application/json')
 
+#修改昵称
 def changeNickname(request):
     try:
         userID = request.GET.get('id',None)
@@ -298,6 +299,7 @@ def changeNickname(request):
     res = json.dumps(res,indent=4)
     return HttpResponse(res, content_type='application/json')
 
+#修改手机号
 def changePhone(request):
     try:
         userID = request.GET.get('id',None)
@@ -306,6 +308,104 @@ def changePhone(request):
             raise Exception,'注册信息参数不完整'
 
         Users().changePhone(userID,Phone)
+        res = {
+            'msg' : '修改成功',
+            'result' : True,
+        }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
+
+#修改姓名
+def changeName(request):
+    try:
+        userID = request.GET.get('id',None)
+        name = request.GET.get('newName',None)
+        if userID==None or name==None:
+            raise Exception,'注册信息参数不完整'
+
+        Users().changeName(userID,name)
+        res = {
+            'msg' : '修改成功',
+            'result' : True,
+        }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
+
+#修改性别
+def changeSex(request):
+    try:
+        userID = request.GET.get('id',None)
+        sex = request.GET.get('newSex',None)
+        if userID==None or sex==None:
+            raise Exception,'注册信息参数不完整'
+
+        Users().changeSex(userID,sex)
+        res = {
+            'msg' : '修改成功',
+            'result' : True,
+        }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
+
+#修改密码，需要同时输入原密码和新密码
+def changePassword(request):
+    try:
+        userID = request.GET.get('id',None)
+        oldPwd = request.GET.get('oldPassword',None)
+        newPwd = request.GET.get('newPassword',None)
+        if userID==None or oldPwd==None or newPwd==None:
+            raise Exception,'注册信息参数不完整'
+
+        enOldPwd=MD5(oldPwd)
+        nowOldPwd = Users().get_password_by_id(userID)
+        #先判断原密码是否输入正确
+        if enOldPwd != nowOldPwd:
+            res = {
+                'msg' : '原密码输入错误',
+                'result' : False,
+            }
+        else :
+            Users().changePassword(userID,MD5(newPwd))
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
+
+#修改出生日期
+def changeBirthday(request):
+    try:
+        userID = request.GET.get('id',None)
+        Date = request.GET.get('newBirthday',None)
+        if userID==None or Date==None:
+            raise Exception,'注册信息参数不完整'
+
+        Users().changeBirthday(userID,Date)
         res = {
             'msg' : '修改成功',
             'result' : True,
