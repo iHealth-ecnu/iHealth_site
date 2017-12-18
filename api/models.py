@@ -34,6 +34,9 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         '''根据用户的兴趣label选择文章序列并返回'''
         #labels按照值降序排列，放在label_list中
         label_list = sorted(labels.items(), key=lambda e:e[1], reverse=True)
+        #只取前5个兴趣label
+        if len(label_list) > 5:
+            label_list = label_list[0:5]
         #返回用户感兴趣的所有文章
         category = [{'category':stri[0]} for stri in label_list]
         article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
