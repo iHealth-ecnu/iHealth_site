@@ -240,6 +240,7 @@ def userListByID(request):
             users.append(temp)
         res = {
             'msg' : '获取成功！',
+            'data' : users,
             'result' : True,
         }
     except Exception,e:
