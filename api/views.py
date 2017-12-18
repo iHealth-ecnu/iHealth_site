@@ -234,6 +234,9 @@ def regUser(request):
         data['password'] = MD5(data['password'])
         #设初始labels为空，个性化推荐用
         data['labels'] = {}
+        data['age'] = int(data['age'])
+        data['sex'] = int(data['sex'])
+        data['usertype'] = int(data['usertype'])
         Users().insert_one(data)
         res = {
             'msg' : '用户注册成功！',
