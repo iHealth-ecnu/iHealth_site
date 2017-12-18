@@ -40,7 +40,7 @@ API 接口采用 RESTful 规范设计
 ----
 * 获取首页文章列表
 
-示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=10&userID=5a02e30be6c80c1c9ecdaea7
+示例：http://ihealth.yangyingming.com/api/v1/articlelist?page=1&limit=10&userID=5a02e30be6c80c1c9ecdaea7&cate=recommend
 
 请求方式：GET
 
@@ -49,6 +49,7 @@ API 接口采用 RESTful 规范设计
 | page     | 1        | 取第几页的数据  |
 | limit    | 10       | 一次取多少个    |
 | userID   | None     | 用户ID,个性化推荐用 |
+| cate   | None     | 首页文章分类,'recommend'为推荐  |
 
 ----
 

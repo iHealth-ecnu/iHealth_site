@@ -25,23 +25,33 @@ def articleList(request):
     page = int(request.GET.get('page',1))
     limit = int(request.GET.get('limit',10))
     userID = request.GET.get('userID', None)
+    #cate为首页显示的的文章分类，None时返回所有文章
+    cate = request.GET.get('cate', None)
 
-
-    #未登录用户
-    if userID == None:
+    #文章分类为空时：
+    if cate == None:
         # 获取数据
         article_list = Articles().find_all()
     else:
-        #获取用户对应的labels
-        labels = Users().find_label(userID)
-        if labels == {} or labels == None:
-            #用户没有labels
-            article_list = Articles().find_all()
-            if labels == None: #对没有labels的用户设置labels
-                Users().insert_label(userID)
+        #文章分类为 推荐
+        if cate == 'recommend':
+            #游客，返回所有文章
+            if userID == None:
+                article_list = Articles().find_all()
+            else:
+                #返回用户label
+                labels = Users().find_label(userID)
+                if labels == {} or labels == None:
+                    #用户没有labels
+                    article_list = Articles().find_all()
+                    if labels == None:
+                        #对没有labels的用户设置labels
+                        Users().insert_label(userID)
+                else:
+                    # 获取对应label的数据
+                    article_list = Articles().find_recommendArticle(labels)
         else:
-            # 获取对应label的数据
-            article_list = Articles().find_labelArticle(labels)
+            article_list = Articles().find_labelArticle(cate)
 
     # 截取数据
     article_list = article_list[(page-1)*limit:(page-1)*limit+limit]

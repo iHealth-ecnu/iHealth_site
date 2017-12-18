@@ -30,12 +30,22 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
             raise Exception,'请提供 id 参数!'
         self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'read':cnt}})
 
-    def find_labelArticle(self, labels):
-        category = [{'category':stri} for stri in labels.keys()]
+    def find_recommendArticle(self, labels):
+        '''根据用户的兴趣label选择文章序列并返回'''
+        #labels按照值降序排列，放在label_list中
+        label_list = sorted(labels.items(), key=lambda e:e[1], reverse=True)
+        #返回用户感兴趣的所有文章
+        category = [{'category':stri[0]} for stri in label_list]
         article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
         return article_list
 
+    def find_labelArticle(self, label):
+        '''返回单个label的文章列表'''
+        article_list = self.articles.find({'category': label}).sort('_id', pymongo.DESCENDING)
+        return article_list
+
     def updateUpvote(self,id=None):
+        '''点赞接口'''
         if id == None:
             raise Exception,'请提供 id 参数!'
         self.articles.update_one({'_id':ObjectId(id)},{'$inc':{'upvote':1}})
