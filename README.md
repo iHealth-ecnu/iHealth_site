@@ -152,6 +152,58 @@ API 接口采用 RESTful 规范设计
 
 ----
 
+* 修改姓名
+
+示例：http://ihealth.yangyingming.com/api/v1/changeName?id=59fb1595dfdeee2b4c26c347&newName=XXX
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改姓名的用户id |
+| newName       | None     | 修改后的姓名 |
+
+----
+
+* 修改性别
+
+示例：http://ihealth.yangyingming.com/api/v1/changeSex?id=59fb1595dfdeee2b4c26c347&newSex=XXX
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改性别的用户id |
+| newSex       | None     | 修改后的性别 |
+
+----
+
+* 修改密码
+
+示例：http://ihealth.yangyingming.com/api/v1/changePassword?id=59fb1595dfdeee2b4c26c347&oldPassword=XXX&newPassword=YYY
+
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改密码的用户id |
+| oldPassword       | None     | 原密码 |
+| newPassword       | None     | 新密码 |
+
+----
+
+* 修改出生日期
+
+示例：http://ihealth.yangyingming.com/api/v1/changeBirthday?id=59fb1595dfdeee2b4c26c347&newBirthday=XXX
+请求方式：GET
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改出生日期的用户id |
+| newBirthday       | None     | 新的出生日期 |
+
+----
+
 ### Django 搭建笔记（笔记部分，和项目无关）
 1. 创建项目目录
 ```
