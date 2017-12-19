@@ -14,5 +14,9 @@ urlpatterns = [
     url(r'^updateUpvote$',views.doUpvote),
     url(r'^changeNickname$',views.changeNickname),
     url(r'^changePhone$',views.changePhone),
+    url(r'^changeName$',views.changeName),
+    url(r'^changeSex$',views.changeSex),
+    url(r'^changePassword$',views.changePassword),
+    url(r'^changeBirthday$',views.changeBirthday),
 ]
 

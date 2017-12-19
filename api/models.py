@@ -114,12 +114,45 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
             cur_labels[label] = value
         self.users.update_one({"_id": ObjectId(id)}, {'$set': {'labels':cur_labels}})
 
+    #修改昵称
     def changeNickname(self,id=None,newName=None):
         if id == None or newName == None:
             raise Exception,'请提供 id 和昵称完整参数!'
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'nickname':newName}})
 
+    #修改手机号
     def changePhone(self,id=None,newPhone=None):
         if id == None or newPhone == None:
-            raise Exception,'请提供 id 和昵称完整参数!'
+            raise Exception,'请提供 id 和手机号完整参数!'
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'phone':newPhone}})
+
+    #修改用户姓名
+    def changeName(self,id=None,newName=None):
+        if id == None or newName == None:
+            raise Exception,'请提供 id 和姓名完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'name':newName}})
+
+    #修改用户性别
+    def changeSex(self,id=None,newSex=None):
+        if id == None or newSex == None:
+            raise Exception,'请提供 id 和 性别 完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'sex':int(newSex)}})
+
+    #根据id返回加密后的密码，用于在修改密码时的密码认证
+    def get_password_by_id(self,id=None):
+        if id == None:
+            raise Exception,'请提供 id 完整参数!'
+        user = self.users.find_one({"_id": ObjectId(id)})
+        return user['password']
+
+    #修改密码
+    def changePassword(self,id=None,newPwd=None):
+        if id == None or newPwd == None:
+            raise Exception,'请提供 id 和 密码 完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'password':newPwd}})
+
+    #修改出生日期
+    def changeBirthday(self,id=None,newBirthday=None):
+        if id == None or newBirthday == None:
+            raise Exception,'请提供 id 和 日期 完整参数!'
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'birthday':newBirthday}})
