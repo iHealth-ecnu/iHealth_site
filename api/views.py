@@ -143,7 +143,7 @@ def userCheck(request):
             }
         elif MD5(user['password']) == real_user['password']:
             real_user['_id'] = str(real_user['_id'])
-            del real_user['password']
+            # del real_user['password']
             res = {
                 'msg' : '用户登陆验证通过！',
                 'data' : real_user,
