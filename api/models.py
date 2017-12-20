@@ -138,7 +138,7 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
             raise Exception,'请提供 id 和 性别 完整参数!'
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'sex':int(newSex)}})
 
-    #根据id返回加密后的密码，用于在修改密码时的密码认证
+    #根据id返回加密后的密码，用于在修改时的密码认证
     def get_password_by_id(self,id=None):
         if id == None:
             raise Exception,'请提供 id 完整参数!'
@@ -156,3 +156,12 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         if id == None or newBirthday == None:
             raise Exception,'请提供 id 和 日期 完整参数!'
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'birthday':newBirthday}})
+
+    #添加病历
+    def addMedicalRecord(self,id=None,data=None):
+        if id == None or data == None:
+            raise Exception,'请提供 id 和 病历 完整参数!'
+        user = self.users.find_one({"_id":ObjectId(id)})
+        temp = list(user['medicalRecord'])
+        temp = temp.append(data)
+        self.users.update_one({'_id':ObjectId(id)},{'$set':{'medicalRecord':temp}})

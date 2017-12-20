@@ -18,5 +18,7 @@ urlpatterns = [
     url(r'^changeSex$',views.changeSex),
     url(r'^changePassword$',views.changePassword),
     url(r'^changeBirthday$',views.changeBirthday),
+    url(r'^addMedicalRecord$',views.addMedicalRecord),
+    url(r'^test$',views.test),
 ]
 
