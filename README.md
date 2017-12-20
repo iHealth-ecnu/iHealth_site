@@ -32,6 +32,7 @@ python manage.py runserver 0.0.0.0:8000
 * [ ] 【接口】获取用户个人病历
 * [ ] 【接口】获取某用户的主治医生信息
 * [x] 【接口】个人信息的修改
+* [x] 【接口】医生为病人添加病历
 
 ### 接口说明
 API 接口采用 RESTful 规范设计
@@ -152,11 +153,37 @@ API 接口采用 RESTful 规范设计
 
 ----
 
+* 修改昵称
+
+示例：http://ihealth.yangyingming.com/api/v1/changeNickname
+
+请求方式：POST
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改昵称的用户id |
+| newName       | None     | 修改后的昵称 |
+
+----
+
+* 修改手机号
+
+示例：http://ihealth.yangyingming.com/api/v1/changePhone
+
+请求方式：POST
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要修改手机号的用户id |
+| newPhone       | None     | 修改后的手机号 |
+
+----
+
 * 修改姓名
 
-示例：http://ihealth.yangyingming.com/api/v1/changeName?id=59fb1595dfdeee2b4c26c347&newName=XXX
+示例：http://ihealth.yangyingming.com/api/v1/changeName
 
-请求方式：GET
+请求方式：POST
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
@@ -167,9 +194,9 @@ API 接口采用 RESTful 规范设计
 
 * 修改性别
 
-示例：http://ihealth.yangyingming.com/api/v1/changeSex?id=59fb1595dfdeee2b4c26c347&newSex=XXX
+示例：http://ihealth.yangyingming.com/api/v1/changeSex
 
-请求方式：GET
+请求方式：POST
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
@@ -180,9 +207,9 @@ API 接口采用 RESTful 规范设计
 
 * 修改密码
 
-示例：http://ihealth.yangyingming.com/api/v1/changePassword?id=59fb1595dfdeee2b4c26c347&oldPassword=XXX&newPassword=YYY
+示例：http://ihealth.yangyingming.com/api/v1/changePassword
 
-请求方式：GET
+请求方式：POST
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
@@ -194,13 +221,29 @@ API 接口采用 RESTful 规范设计
 
 * 修改出生日期
 
-示例：http://ihealth.yangyingming.com/api/v1/changeBirthday?id=59fb1595dfdeee2b4c26c347&newBirthday=XXX
-请求方式：GET
+示例：http://ihealth.yangyingming.com/api/v1/changeBirthday
+
+请求方式：POST
 
 | 参数      | 默认值   | 说明 |
 | -------- | -------- | --------          |
 | id       | None     | 要修改出生日期的用户id |
 | newBirthday       | None     | 新的出生日期 |
+
+----
+
+* 添加病历
+
+示例：http://ihealth.yangyingming.com/api/v1/addMedicalRecord
+
+请求方式：POST
+
+| 参数      | 默认值   | 说明 |
+| -------- | -------- | --------          |
+| id       | None     | 要添加病历的用户id |
+| date       | None     | 添加病历的日期 |
+| doctor       | None     | 添加病历的主治医生 |
+| content       | None     | 病历内容 |
 
 ----
 
