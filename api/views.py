@@ -173,7 +173,7 @@ def userList(request):
         # 提取参数
         name = request.GET.get('name','')
         selfname = request.GET.get('selfname','')
-        limit = int(request.GET.get('limit',10))
+        limit = int(request.GET.get('limit',25))
         # 获取数据
         user_list = Users().find_many_by_name(name)
         # 截取数据
@@ -234,6 +234,8 @@ def regUser(request):
         data['password'] = MD5(data['password'])
         #设初始labels为空，个性化推荐用
         data['labels'] = {}
+        #初始化用户病历字段
+        data['medicalRecord']=[]
         Users().insert_one(data)
         res = {
             'msg' : '用户注册成功！',
@@ -248,6 +250,17 @@ def regUser(request):
     res = json.dumps(res, indent=4)
     return HttpResponse(res, content_type='application/json')
 
+def test(request):
+    return render(request,'index.html')
+
+
+#根据id，进行密码验证
+def check_password(id,password):
+    realPwd = Users().get_password_by_id(id)
+    if MD5(password) == realPwd:
+        return True
+    else :
+        return False
 
 #根据id列表取出users用于群聊
 def userListByID(request):
@@ -278,18 +291,26 @@ def userListByID(request):
     return HttpResponse(res, content_type='application/json')
 
 #修改昵称
+@csrf_exempt
 def changeNickname(request):
     try:
-        userID = request.GET.get('id',None)
-        name = request.GET.get('newName',None)
-        if userID==None or name==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('password') and data.has_key('newName')):
             raise Exception,'注册信息参数不完整'
-
-        Users().changeNickname(userID,name)
-        res = {
-            'msg' : '修改成功',
-            'result' : True,
-        }
+        userID = data['id']
+        password = data['password']
+        name = data['newName']
+        if check_password(userID,password) == False:
+            res = {
+                'msg' : '修改失败，请保证网络安全',
+                'result' : False,
+            }
+        else :
+            Users().changeNickname(userID,name)
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
     except Exception,e:
         res={
             'msg' : '修改失败',
@@ -300,18 +321,26 @@ def changeNickname(request):
     return HttpResponse(res, content_type='application/json')
 
 #修改手机号
+@csrf_exempt
 def changePhone(request):
     try:
-        userID = request.GET.get('id',None)
-        Phone = request.GET.get('newPhone',None)
-        if userID==None or Phone==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('password') and data.has_key('newPhone')):
             raise Exception,'注册信息参数不完整'
-
-        Users().changePhone(userID,Phone)
-        res = {
-            'msg' : '修改成功',
-            'result' : True,
-        }
+        userID = data['id']
+        password = data['password']
+        phone = data['newPhone']
+        if check_password(userID,password) == False:
+            res = {
+                'msg' : '修改失败，请保证网络安全',
+                'result' : False,
+            }
+        else :
+            Users().changePhone(userID,phone)
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
     except Exception,e:
         res={
             'msg' : '修改失败',
@@ -322,18 +351,27 @@ def changePhone(request):
     return HttpResponse(res, content_type='application/json')
 
 #修改姓名
+@csrf_exempt
 def changeName(request):
     try:
-        userID = request.GET.get('id',None)
-        name = request.GET.get('newName',None)
-        if userID==None or name==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('password') and data.has_key('newName')):
             raise Exception,'注册信息参数不完整'
+        userID = data['id']
+        password = data['password']
+        name = data['newName']
 
-        Users().changeName(userID,name)
-        res = {
-            'msg' : '修改成功',
-            'result' : True,
-        }
+        if check_password(userID,password) == False:
+            res = {
+                'msg' : '修改失败，请保证网络安全',
+                'result' : False,
+            }
+        else :
+            Users().changeName(userID,name)
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
     except Exception,e:
         res={
             'msg' : '修改失败',
@@ -343,19 +381,29 @@ def changeName(request):
     res = json.dumps(res,indent=4)
     return HttpResponse(res, content_type='application/json')
 
+
 #修改性别
+@csrf_exempt
 def changeSex(request):
     try:
-        userID = request.GET.get('id',None)
-        sex = request.GET.get('newSex',None)
-        if userID==None or sex==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('password') and data.has_key('newSex')):
             raise Exception,'注册信息参数不完整'
+        userID = data['id']
+        password = data['password']
+        sex = data['newSex']
 
-        Users().changeSex(userID,sex)
-        res = {
-            'msg' : '修改成功',
-            'result' : True,
-        }
+        if check_password(userID,password) == False:
+            res = {
+                'msg' : '修改失败，请保证网络安全',
+                'result' : False,
+            }
+        else :
+            Users().changeSex(userID,sex)
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
     except Exception,e:
         res={
             'msg' : '修改失败',
@@ -366,20 +414,19 @@ def changeSex(request):
     return HttpResponse(res, content_type='application/json')
 
 #修改密码，需要同时输入原密码和新密码
+@csrf_exempt
 def changePassword(request):
     try:
-        userID = request.GET.get('id',None)
-        oldPwd = request.GET.get('oldPassword',None)
-        newPwd = request.GET.get('newPassword',None)
-        if userID==None or oldPwd==None or newPwd==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('oldPassword') and data.has_key('newPassword')):
             raise Exception,'注册信息参数不完整'
+        userID = data['id']
+        oldPwd = data['oldPassword']
+        newPwd = data['newPassword']
 
-        enOldPwd=MD5(oldPwd)
-        nowOldPwd = Users().get_password_by_id(userID)
-        #先判断原密码是否输入正确
-        if enOldPwd != nowOldPwd:
+        if check_password(userID,oldPwd) == False:
             res = {
-                'msg' : '原密码输入错误',
+                'msg' : '密码错误，修改失败',
                 'result' : False,
             }
         else :
@@ -398,14 +445,50 @@ def changePassword(request):
     return HttpResponse(res, content_type='application/json')
 
 #修改出生日期
+@csrf_exempt
 def changeBirthday(request):
     try:
-        userID = request.GET.get('id',None)
-        Date = request.GET.get('newBirthday',None)
-        if userID==None or Date==None:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('password') and data.has_key('newBirthday')):
             raise Exception,'注册信息参数不完整'
+        userID = data['id']
+        password = data['password']
+        Date = data['newBirthday']
 
-        Users().changeBirthday(userID,Date)
+        if check_password(userID,password) == False:
+            res = {
+                'msg' : '修改失败，请保证网络安全',
+                'result' : False,
+            }
+        else :
+            Users().changeBirthday(userID,Date)
+            res = {
+                'msg' : '修改成功',
+                'result' : True,
+            }
+    except Exception,e:
+        res={
+            'msg' : '修改失败',
+            'reason' : str(e),
+            'result' : False,
+        }
+    res = json.dumps(res,indent=4)
+    return HttpResponse(res, content_type='application/json')
+
+#写入病历
+@csrf_exempt
+def addMedicalRecord(request):
+    try:
+        data = request.POST.copy()
+        if not(data.has_key('id') and data.has_key('date') and data.has_key('doctor') and data.has_key('content')):
+            raise Exception,'注册信息参数不完整'
+        userID = data['id']
+
+        toData = {}
+        toData['date']=data['date']
+        toData['doctor']=data['doctor']
+        toData['content']=data['content']
+        Users().addMedicalRecord(userID,toData)
         res = {
             'msg' : '修改成功',
             'result' : True,

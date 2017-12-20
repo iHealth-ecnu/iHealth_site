@@ -18,5 +18,6 @@ urlpatterns = [
     url(r'^changeSex$',views.changeSex),
     url(r'^changePassword$',views.changePassword),
     url(r'^changeBirthday$',views.changeBirthday),
+    url(r'^test$',views.test),
 ]
 
