@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.test import Client
-from django.test import main
 
 import json
 
@@ -20,6 +19,7 @@ class EncryptTestCase(TestCase):
 
 from .views import articleList
 class ViewTestCase(TestCase):
+    setup_done = False
     def test_return_code(self):
         response = self.client.get('/api/v1/hello/')
         self.assertEqual(response.status_code, 200)
@@ -91,7 +91,16 @@ class ViewTestCase(TestCase):
             {'id': '', 'date':'', 'doctor': '', 'content':''})
         self.assertEqual(response.status_code, 200)
 
+
+
+
+
     def setUp(self):
+        if self.setup_done:
+            return
+        self.setup_done = True
+
+        
         ''' 
         first testing user reg for rest tests;
         '''
@@ -101,7 +110,17 @@ class ViewTestCase(TestCase):
              'birthday': '1999-11-20', 'introduction': 'new lanbing huangzhe', 'age':'11',
              'phone':'123'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True',response.content)
+
+
+        # user passwd test
+        response = self.client.post('/api/v1/usercheck', \
+            {'email':'admin@mypre.cn', 'password':'123456'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('true',response.content)
+
+        json_data = json.loads(response.content)
+
+        self.user_id = json_data['data']['_id']
 
         # register repeat user test
         response = self.client.post('/api/v1/reguser', \
@@ -110,17 +129,10 @@ class ViewTestCase(TestCase):
              'birthday': '1999-11-20', 'introduction': 'new lanbing huangzhe', 'age':'11',
              'phone':'123'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('False',response.content)
+        self.assertIn('false',response.content)
 
-        # user passwd test
-        response = self.client.post('/api/v1/usercheck', \
-            {'email':'admin@mypre.cn', 'password':'123456'})
-        self.assertEqual(response.status_code, 200)
-        self.assertIn('True',response.content)
 
-        json_data = json.loads(response.content)[0]
 
-        self.user_id = json_data['_id']
 
 
     def test_article_list(self):
@@ -133,14 +145,18 @@ class ViewTestCase(TestCase):
             self.article_list = json_data
 
     def test_article_detail(self):
+        self.test_article_list()
         response = self.client.get('/api/v1/articledetail', \
             {'id': self.article_list[0]['_id'], 'userID': self.user_id})
         self.assertEqual(response.status_code, 200)
-        json = json.loads(response.content)[0]
+        # self.article_detail = json.loads()
+        self.assertIn('href', response.content)
+
 
 
 
     def test_article_upvote(self):
+        self.test_article_list()
         response = self.client.get('/api/v1/updateUpvote', \
             {'id': self.article_list[0]['_id'], 'userID': self.user_id})
         self.assertEqual(response.status_code, 200)
@@ -155,35 +171,38 @@ class ViewTestCase(TestCase):
         response = self.client.post('/api/v1/changePhone', \
             {'id': self.user_id, 'newPhone':'456'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+        self.assertIn('true', response.content)
 
     def test_change_name(self):
         response = self.client.post('/api/v1/changeName', \
             {'id': self.user_id, 'newName': 'lanbing new Name'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+        self.assertIn('true', response.content)
 
     def test_change_sex(self):
         response = self.client.post('/api/v1/changeSex', \
             {'id': self.user_id, 'newSex':'1'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+        self.assertIn('true', response.content)
 
     def test_change_passwd(self):
         response = self.client.post('/api/v1/changePassword', \
             {'id': self.user_id, 'oldPassword':'123456', 'newPassword':'123456'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+        self.assertIn('true', response.content)
 
     def test_change_birthday(self):
         response = self.client.post('/api/v1/changeBirthday', \
             {'id': self.user_id, 'newBirthday': '1999-10-10'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+        self.assertIn('true', response.content)
 
     def test_add_medical_record(self):
         response = self.client.post('/api/v1/addMedicalRecord', \
-            {'id': self.user_id, 'date':'2017-12-20 12:12:12', \
+            {'id': self.user_id, 'date':'21312423', \
             'doctor': 'JiangYiShen', 'content':'I\'m not sick!!!'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('True', response.content)
+
+        self.assertIn('true', response.content)
+
+

@@ -248,7 +248,7 @@ def regUser(request):
         }
     except Exception,e:
         res = {
-            'msg' : '用户注册失败！',
+            'msg' : '用户注册失败, false！',
             'reason' : str(e),
             'result' : False,
         }
