@@ -143,7 +143,7 @@ def userCheck(request):
             }
         elif MD5(user['password']) == real_user['password']:
             real_user['_id'] = str(real_user['_id'])
-            del real_user['password']
+            # del real_user['password']
             res = {
                 'msg' : '用户登陆验证通过！',
                 'data' : real_user,
@@ -234,8 +234,13 @@ def regUser(request):
         data['password'] = MD5(data['password'])
         #设初始labels为空，个性化推荐用
         data['labels'] = {}
+        
         #初始化用户病历字段
         data['medicalRecord']=[]
+        data['age'] = int(data['age'])
+        data['sex'] = int(data['sex'])
+        data['usertype'] = int(data['usertype'])
+        
         Users().insert_one(data)
         res = {
             'msg' : '用户注册成功！',
