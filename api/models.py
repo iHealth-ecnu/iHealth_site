@@ -162,6 +162,6 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         if id == None or data == None:
             raise Exception,'请提供 id 和 病历 完整参数!'
         user = self.users.find_one({"_id":ObjectId(id)})
-        temp = list(user['medicalRecord'])
+        temp = list(user['medicalRecord'] or [''])
         temp = temp.append(data)
         self.users.update_one({'_id':ObjectId(id)},{'$set':{'medicalRecord':temp}})
