@@ -38,9 +38,11 @@ MONGO_AUTHDB))[settings.MONGO_DBNAME]
         if len(label_list) > 5:
             label_list = label_list[0:5]
         #返回用户感兴趣的所有文章
-        category = [{'category':stri[0]} for stri in label_list]
-        article_list = self.articles.find({'$or':category }).sort('_id', pymongo.DESCENDING)
-        return article_list
+        #article_C 为放置各个分类文章的容器
+        article_C = []
+        for category in label_list:
+            article_C.append((self.articles.find({'category':category[0] }).sort('_id', pymongo.DESCENDING)))
+        return article_C
 
     def find_labelArticle(self, label):
         '''返回单个label的文章列表'''
