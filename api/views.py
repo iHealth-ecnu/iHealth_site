@@ -6,7 +6,7 @@ import sys
 import json
 from django.views.decorators.csrf import csrf_exempt
 import hashlib
-
+import random
 
 
 def MD5(s):
@@ -49,7 +49,31 @@ def articleList(request):
                         Users().insert_label(userID)
                 else:
                     # 获取对应label的数据
-                    article_list = Articles().find_recommendArticle(labels)
+                    # article_C每一维为一个分类的文章
+                    article_C = Articles().find_recommendArticle(labels)
+                    # num_arc_beg 起始文章标号 num_arc_end 结束文章标号
+                    num_arc_beg = (page - 1) *  limit
+                    num_arc_end = page * limit
+                    article_list = []
+                    len_c = len(article_C)
+                    for i in range(num_arc_beg, num_arc_end):
+                        article_list.append(article_C[i%len_c][i/len_c])
+                    #一页的文章随机打乱
+                    # random.shuffle(article_list)
+                    #直接返回
+                    res_list = []
+                    for article in article_list:
+                        # 将对象中不是字符串的变量值转换为字符串
+                        article['_id'] = article['_id'].__str__()
+                        article['pubdate'] = article['pubdate'].__str__()
+                        # article['content'] = article['content'].strip()
+                        article['intro'] = article['intro'].strip()
+                        del article['content']
+                        res_list.append(article)
+                    # 转换为JSON
+                    # res = json.dumps(res_list, indent=4, ensure_ascii=False, encoding='utf-8')
+                    res = json.dumps(res_list, indent=4)
+                    return HttpResponse(res, content_type='application/json')
         else:
             article_list = Articles().find_labelArticle(cate)
 
