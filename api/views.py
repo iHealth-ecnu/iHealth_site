@@ -286,7 +286,7 @@ def test(request):
 #根据id，进行密码验证
 def check_password(id,password):
     realPwd = Users().get_password_by_id(id)
-    if MD5(password) == realPwd:
+    if password == realPwd:
         return True
     else :
         return False
@@ -453,7 +453,7 @@ def changePassword(request):
         oldPwd = data['oldPassword']
         newPwd = data['newPassword']
 
-        if check_password(userID,oldPwd) == False:
+        if check_password(userID,MD5(oldPwd)) == False:
             res = {
                 'msg' : '密码错误，修改失败',
                 'result' : False,
