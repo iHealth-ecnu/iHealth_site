@@ -248,7 +248,7 @@ def regUser(request):
         }
     except Exception,e:
         res = {
-            'msg' : '用户注册失败, false！',
+            'msg' : '用户注册失败！',
             'reason' : str(e),
             'result' : False,
         }
@@ -456,6 +456,7 @@ def changeBirthday(request):
         data = request.POST.copy()
         if not(data.has_key('id') and data.has_key('password') and data.has_key('newBirthday')):
             raise Exception,'注册信息参数不完整'
+        print data
         userID = data['id']
         password = data['password']
         Date = data['newBirthday']
@@ -487,6 +488,7 @@ def addMedicalRecord(request):
         data = request.POST.copy()
         if not(data.has_key('id') and data.has_key('date') and data.has_key('doctor') and data.has_key('content')):
             raise Exception,'注册信息参数不完整'
+        print data
         userID = data['id']
 
         toData = {}

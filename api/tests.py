@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.test import Client
 
+import random
 import json
 
 from .views import MD5
@@ -112,15 +113,7 @@ class ViewTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
-        # user passwd test
-        response = self.client.post('/api/v1/usercheck', \
-            {'email':'admin@mypre.cn', 'password':'123456'})
-        self.assertEqual(response.status_code, 200)
-        self.assertIn('true',response.content)
 
-        json_data = json.loads(response.content)
-
-        self.user_id = json_data['data']['_id']
 
         # register repeat user test
         response = self.client.post('/api/v1/reguser', \
@@ -131,9 +124,27 @@ class ViewTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('false',response.content)
 
+    def test_user_passwd(self):
+        # user passwd test
+        response = self.client.post('/api/v1/usercheck', \
+            {'email':'admin@mypre.cn', 'password':'123456'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('true',response.content)
 
+        json_data = json.loads(response.content)
 
+        self.user_id = json_data['data']['_id']
 
+    def test_user_detail(self):
+        self.test_user_passwd()
+        response = self.client.get('/api/v1/user', \
+            {'id': self.user_id})
+        self.assertEqual(response.status_code, 200)
+        json_data = json.loads(response.content)
+        self.assertIn('name',response.content)
+        self.assertIn('phone', response.content)
+        self.assertIn('labels', response.content)
+        self.assertIn('_id', json_data)
 
     def test_article_list(self):
         for pagei in xrange(1, 5):
@@ -145,7 +156,9 @@ class ViewTestCase(TestCase):
             self.article_list = json_data
 
     def test_article_detail(self):
+        self.test_user_passwd()
         self.test_article_list()
+        self.test_user_passwd()
         response = self.client.get('/api/v1/articledetail', \
             {'id': self.article_list[0]['_id'], 'userID': self.user_id})
         self.assertEqual(response.status_code, 200)
@@ -156,6 +169,7 @@ class ViewTestCase(TestCase):
 
 
     def test_article_upvote(self):
+        self.test_user_passwd()
         self.test_article_list()
         response = self.client.get('/api/v1/updateUpvote', \
             {'id': self.article_list[0]['_id'], 'userID': self.user_id})
@@ -164,43 +178,86 @@ class ViewTestCase(TestCase):
 
     def test_userlist(self):
         response = self.client.get('/api/v1/userlist', \
-            {'name': '', 'selfname': '', 'limit': ''})
+            {'name': 'a', 'selfname': '', 'limit': ''})
         self.assertEqual(response.status_code, 200)
+        self.assertIn('_id', response.content)
+
+        response = self.client.get('/api/v1/userlist', \
+            {'name': 'asdfsdf', 'selfname': '', 'limit': '30'})
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn('_id', response.content)
+
 
     def test_change_phone(self):
+        self.test_user_passwd()
         response = self.client.post('/api/v1/changePhone', \
-            {'id': self.user_id, 'newPhone':'456'})
+            {'id': self.user_id, 'newPhone':'456', 'password':'123456'})
         self.assertEqual(response.status_code, 200)
         self.assertIn('true', response.content)
+
+        response = self.client.post('/api/v1/changePhone', \
+            {'id': self.user_id, 'newPhone':'456', 'password':'!!!'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('false', response.content)
 
     def test_change_name(self):
+        self.test_user_passwd()
         response = self.client.post('/api/v1/changeName', \
-            {'id': self.user_id, 'newName': 'lanbing new Name'})
+            {'id': self.user_id, 'newName': 'lanbing new Name', 'password':'123456'})
         self.assertEqual(response.status_code, 200)
         self.assertIn('true', response.content)
 
+        response = self.client.post('/api/v1/changeName', \
+            {'id': self.user_id, 'newName': 'lanbing new Name', 'password':'123'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('false', response.content)
+
+
     def test_change_sex(self):
+        self.test_user_passwd()
+        response = self.client.post('/api/v1/changeSex', \
+            {'id': self.user_id, 'newSex':'1', 'password':'123456'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('true', response.content)
+
+        response = self.client.post('/api/v1/changeSex', \
+            {'id': self.user_id, 'newSex':'1', 'password':'sdf'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('false', response.content)
+
         response = self.client.post('/api/v1/changeSex', \
             {'id': self.user_id, 'newSex':'1'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn('true', response.content)
+        self.assertIn('false', response.content)
 
     def test_change_passwd(self):
+        self.test_user_passwd()
         response = self.client.post('/api/v1/changePassword', \
             {'id': self.user_id, 'oldPassword':'123456', 'newPassword':'123456'})
         self.assertEqual(response.status_code, 200)
         self.assertIn('true', response.content)
 
     def test_change_birthday(self):
+        self.test_user_passwd()
         response = self.client.post('/api/v1/changeBirthday', \
-            {'id': self.user_id, 'newBirthday': '1999-10-10'})
+            {'id': self.user_id, 'newBirthday': '1999-10-10', 'password':'123456'})
         self.assertEqual(response.status_code, 200)
         self.assertIn('true', response.content)
 
+    def test_change_nickname(self):
+        self.test_user_passwd()
+        response = self.client.post('/api/v1/changeNickname', \
+            {'id': self.user_id, 'newName': 'lanbing\' new nickname!!!', 'password':'123456'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('true', response.content)
+
+
     def test_add_medical_record(self):
+        self.test_user_passwd()
         response = self.client.post('/api/v1/addMedicalRecord', \
             {'id': self.user_id, 'date':'21312423', \
-            'doctor': 'JiangYiShen', 'content':'I\'m not sick!!!'})
+            'doctor': 'JiangYiShen', 'content':'I\'m not sick!!!', \
+            'password':'123456'})
         self.assertEqual(response.status_code, 200)
 
         self.assertIn('true', response.content)
