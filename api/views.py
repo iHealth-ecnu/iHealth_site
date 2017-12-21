@@ -59,7 +59,7 @@ def articleList(request):
                     for i in range(num_arc_beg, num_arc_end):
                         article_list.append(article_C[i%len_c][i/len_c])
                     #一页的文章随机打乱
-                    random.shuffle(article_list)
+                    # random.shuffle(article_list)
                     #直接返回
                     res_list = []
                     for article in article_list:
