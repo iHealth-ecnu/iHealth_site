@@ -165,7 +165,7 @@ def userCheck(request):
                 'reason' : 'User is not found.',
                 'result' : False,
             }
-        elif MD5(user['password']) == real_user['password']:
+        elif user['password'] == real_user['password']:     #取消MD5再次加密
             real_user['_id'] = str(real_user['_id'])
             # del real_user['password']
             res = {
@@ -209,6 +209,7 @@ def userList(request):
             # 排除掉自身
             if user['name']==selfname:
                 continue
+            del user['password']
             res_list.append(user)
         # 转换为JSON
         res = json.dumps(res_list, indent=4)
@@ -231,6 +232,8 @@ def userDetail(request):
             return HttpResponse('请提供 id 参数!')
         # 获取数据
         user = Users().find_one(id=id)
+        #出于安全性，将password字段去掉
+        del user['password']
         # 准备文章数据，转换为 JSON
         user['_id'] = str(user['_id'])
         res = json.dumps(user, indent=4)
@@ -255,7 +258,8 @@ def regUser(request):
         if Users().find_one_by_email(data['email']) != None:
             raise Exception,'邮箱已被注册过'
         # 插入数据
-        data['password'] = MD5(data['password'])
+        #将下面一行注释掉，取消MD5再次加密
+        #data['password'] = MD5(data['password'])
         #设初始labels为空，个性化推荐用
         data['labels'] = {}
         
@@ -453,13 +457,13 @@ def changePassword(request):
         oldPwd = data['oldPassword']
         newPwd = data['newPassword']
 
-        if check_password(userID,MD5(oldPwd)) == False:
+        if check_password(userID,oldPwd) == False:   #取消MD5再次加密
             res = {
                 'msg' : '密码错误，修改失败',
                 'result' : False,
             }
         else :
-            Users().changePassword(userID,MD5(newPwd))
+            Users().changePassword(userID,newPwd)   #取消MD5再次加密
             res = {
                 'msg' : '修改成功',
                 'result' : True,
