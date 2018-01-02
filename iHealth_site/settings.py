@@ -105,7 +105,7 @@ STATIC_URL = '/static/'
 
 
 # 自定义设置
-MONGO_HOST = '123.56.8.91'
+MONGO_HOST = '39.106.10.31'
 MONGO_PORT = 27017
 MONGO_DBNAME = 'iHealth'
 MONGO_AUTHDB = 'iHealth'
